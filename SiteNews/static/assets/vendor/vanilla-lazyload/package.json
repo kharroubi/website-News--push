@@ -1,0 +1,88 @@
+{
+  "_from": "vanilla-lazyload",
+  "_id": "vanilla-lazyload@12.0.0-beta.0",
+  "_inBundle": false,
+  "_integrity": "sha512-5Ey8BDgeJE19iGw8x5ESRbEiBap4I5Jfqjcct5Y6Ym3On4g5zu71/efMhtlLrx2dKQxxxs4iacFGxdMHeRvB0w==",
+  "_location": "/vanilla-lazyload",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "vanilla-lazyload",
+    "name": "vanilla-lazyload",
+    "escapedName": "vanilla-lazyload",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vanilla-lazyload/-/vanilla-lazyload-12.0.0-beta.0.tgz",
+  "_shasum": "ee6d482fc5fb3494d5b6fde21f639470feaae1a0",
+  "_spec": "vanilla-lazyload",
+  "_where": "C:\\Users\\COMPAQ\\Videos\\bootnews",
+  "author": {
+    "name": "Andrea \"verlok\" Verlicchi",
+    "email": "andrea.verlicchi@gmail.com",
+    "url": "http://andreaverlicchi.eu"
+  },
+  "browser": "dist/lazyload.min.js",
+  "bugs": {
+    "url": "https://github.com/verlok/lazyload/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A fast, lightweight script to load images as they enter the viewport. SEO friendly, it supports responsive images (both srcset + sizes and picture) and progressive JPEG",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.16.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
+    "jest": "^24.1.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "http://verlok.github.io/lazyload",
+  "keywords": [
+    "lazyload",
+    "vanilla",
+    "responsive",
+    "images",
+    "picture",
+    "srcset",
+    "SEO",
+    "intersectionObserver",
+    "sizes",
+    "progressive",
+    "performance",
+    "perfmatters",
+    "async",
+    "no-jquery"
+  ],
+  "license": "MIT",
+  "main": "dist/lazyload.min.js",
+  "module": "dist/lazyload.esm.js",
+  "name": "vanilla-lazyload",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verlok/lazyload.git"
+  },
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch",
+    "test": "jest"
+  },
+  "version": "12.0.0-beta.0"
+}

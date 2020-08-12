@@ -1,0 +1,114 @@
+/*------------------------------------
+	Mega menu
+------------------------------------*/
+.navbar {
+	.dropdown-menu {
+		&.mega {
+			right: auto;
+			left: 0;
+			.block-area {
+				margin: 1.5rem .5rem;
+			}
+		}
+		&.mega.show {
+			display: block;
+		}
+	}
+}
+.mega {
+	.title-nav {
+		padding-right: $mega-item-padding-left;
+		padding-left: $mega-item-padding-right;
+	}
+}
+.navbar-expand-lg {
+	.navbar-nav {
+		.mega-link > li > a.dropdown-item {
+			padding-right: $mega-item-padding-left;
+			padding-left: $mega-item-padding-right;
+		}
+	}
+}
+.mega-link {
+	.dropdown-item {
+		&.active {
+			background-color: $mega-item-active;
+		}
+		&:active {
+			background-color: $mega-item-active;
+		}
+	}
+}
+.before-caret {
+	a {
+		&:before {
+			content: "\f105";
+			font-family: $font-a-family;
+			font-weight: $font-weight-900;
+			display: inline-block;
+			margin-left: $font-a-margin-right;
+			font-size: $font-a-size;
+		}
+	}
+}
+// mega menu sub link
+.mega {
+	ul {
+		&.menu {
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			margin-left: -15px;
+			margin-right: -15px;
+			padding-right: 0;
+			list-style: none;
+			&> li{
+				border-left: 1px solid #dee2e6;
+                &:last-child {
+					border-left: none;
+				}
+				&> a {
+					color: #161616;
+					line-height: 2.5rem;
+					font-weight: 500;
+					font-size: 1rem;
+					padding-right: 1.5rem;
+					padding-left: 1.5rem;
+					margin-bottom: 1rem;
+					background: transparent;
+					&::after {
+						content: none !important;
+					}
+				}
+				&:hover {
+					&> a {
+						color: #161616;
+						background-color: transparent;
+					}
+				}
+			}
+			ul {
+				padding-right: 0;
+			   list-style: none;
+			   li {
+				   a {
+					display: block;
+					width: 100%;
+					padding: 0.5rem 1.5rem;
+					clear: both;
+					font-weight: 400;
+					color: #212529;
+					text-align: inherit;
+					white-space: nowrap;
+					background-color:  transparent;
+					border: 0;
+					&::after {
+							content: none !important;
+					    }
+				    }
+			    }
+			}
+		}
+	}
+}

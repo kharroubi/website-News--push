@@ -1,0 +1,228 @@
+// stylelint-disable declaration-no-important
+
+// Margin and Padding
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    /*extra padding*/
+    .p#{$infix}-05 {
+      padding: $padding-05 !important;
+    }
+    .px#{$infix}-05, .pl#{$infix}-05 {
+      padding-left: $padding-05 !important;
+    }
+    .px#{$infix}-05, .pr#{$infix}-05 {
+      padding-right: $padding-05 !important;
+    }
+    .py#{$infix}-05, .pt#{$infix}-05 {
+      padding-top: $padding-05 !important;
+    }
+    .py#{$infix}-05, .pb#{$infix}-05 {
+      padding-bottom: $padding-05 !important;
+    }
+    /*default padding*/
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+        .#{$abbrev}t#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$abbrev}r#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$abbrev}b#{$infix}-#{$size},
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$abbrev}l#{$infix}-#{$size},
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-left: $length !important;
+        }
+      }
+    }
+    /*extra big padding*/
+    .p#{$infix}-6 {
+      padding: $padding-six !important;
+    }
+    .px#{$infix}-6, .pl#{$infix}-6 {
+      padding-left: $padding-six !important;
+    }
+    .px#{$infix}-6, .pr#{$infix}-6 {
+      padding-right: $padding-six !important;
+    }
+    .py#{$infix}-6, .pt#{$infix}-6 {
+      padding-top: $padding-six !important;
+    }
+    .py#{$infix}-6, .pb#{$infix}-6 {
+      padding-bottom: $padding-six !important;
+    }
+    .p#{$infix}-7 {
+      padding: $padding-seven !important;
+    }
+    .px#{$infix}-7, .pl#{$infix}-7 {
+      padding-left: $padding-seven !important;
+    }
+    .px#{$infix}-7, .pr#{$infix}-7 {
+      padding-right: $padding-seven !important;
+    }
+    .py#{$infix}-7, .pt#{$infix}-7 {
+      padding-top: $padding-seven !important;
+    }
+    .py#{$infix}-7, .pb#{$infix}-7 {
+      padding-bottom: $padding-seven !important;
+    }
+    .p#{$infix}-8 {
+      padding: $padding-eight !important;
+    }
+    .px#{$infix}-8, .pl#{$infix}-8 {
+      padding-left: $padding-eight !important;
+    }
+    .px#{$infix}-8, .pr#{$infix}-8 {
+      padding-right: $padding-eight !important;
+    }
+    .py#{$infix}-8, .pt#{$infix}-8 {
+      padding-top: $padding-eight !important;
+    }
+    .py#{$infix}-8, .pb#{$infix}-8 {
+      padding-bottom: $padding-eight !important;
+    }
+    .p#{$infix}-9 {
+      padding: $padding-nine !important;
+    }
+    .px#{$infix}-9, .pl#{$infix}-9 {
+      padding-left: $padding-nine !important;
+    }
+    .px#{$infix}-9, .pr#{$infix}-9 {
+      padding-right: $padding-nine !important;
+    }
+    .py#{$infix}-9, .pt#{$infix}-9 {
+      padding-top: $padding-nine !important;
+    }
+    .py#{$infix}-9, .pb#{$infix}-9 {
+      padding-bottom: $padding-nine !important;
+    }
+    /*extra margin*/
+    .m#{$infix}-05 {
+      margin: $margin-05 !important;
+    }
+    .mx#{$infix}-05, .ml#{$infix}-05 {
+      margin-left: $margin-05 !important;
+    }
+    .mx#{$infix}-05, .mr#{$infix}-05 {
+      margin-right: $margin-05 !important;
+    }
+    .my#{$infix}-05, .mt#{$infix}-05 {
+      margin-top: $margin-05 !important;
+    }
+    .my#{$infix}-05, .mb#{$infix}-05 {
+      margin-bottom: $margin-05 !important;
+    }
+    /*default margin*/
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .m#{$infix}-n#{$size} { margin: -$length !important; }
+        .mt#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-top: -$length !important;
+        }
+        .mr#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-right: -$length !important;
+        }
+        .mb#{$infix}-n#{$size},
+        .my#{$infix}-n#{$size} {
+          margin-bottom: -$length !important;
+        }
+        .ml#{$infix}-n#{$size},
+        .mx#{$infix}-n#{$size} {
+          margin-left: -$length !important;
+        }
+      }
+    }
+    /*extra big margin*/
+    .m#{$infix}-6 {
+      margin: $margin-six !important;
+    }
+    .mx#{$infix}-6, .ml#{$infix}-6 {
+      margin-left: $margin-six !important;
+    }
+    .mx#{$infix}-6, .mr#{$infix}-6 {
+      margin-right: $margin-six !important;
+    }
+    .my#{$infix}-6, .mt#{$infix}-6 {
+      margin-top: $margin-six !important;
+    }
+    .my#{$infix}-6, .mb#{$infix}-6 {
+      margin-bottom: $margin-six !important;
+    }
+    .m#{$infix}-7 {
+      margin: $margin-seven !important;
+    }
+    .mx#{$infix}-7, .ml#{$infix}-7 {
+      margin-left: $margin-seven !important;
+    }
+    .mx#{$infix}-7, .mr#{$infix}-7 {
+      margin-right: $margin-seven !important;
+    }
+    .my#{$infix}-7, .mt#{$infix}-7 {
+      margin-top: $margin-seven !important;
+    }
+    .my#{$infix}-7, .mb#{$infix}-7 {
+      margin-bottom: $margin-seven !important;
+    }
+    .m#{$infix}-8 {
+      margin: $margin-eight !important;
+    }
+    .mx#{$infix}-8, .ml#{$infix}-8 {
+      margin-left: $margin-eight !important;
+    }
+    .mx#{$infix}-8, .mr#{$infix}-8 {
+      margin-right: $margin-eight !important;
+    }
+    .my#{$infix}-8, .mt#{$infix}-8 {
+      margin-top: $margin-eight !important;
+    }
+    .my#{$infix}-8, .mb#{$infix}-8 {
+      margin-bottom: $margin-eight !important;
+    }
+    .m#{$infix}-9 {
+      margin: $margin-nine !important;
+    }
+    .mx#{$infix}-9, .ml#{$infix}-9 {
+      margin-left: $margin-nine !important;
+    }
+    .mx#{$infix}-9, .mr#{$infix}-9 {
+      margin-right: $margin-nine !important;
+    }
+    .my#{$infix}-9, .mt#{$infix}-9 {
+      margin-top: $margin-nine !important;
+    }
+    .my#{$infix}-9, .mb#{$infix}-9 {
+      margin-bottom: $margin-nine !important;
+    }
+
+    // Some special margin utils
+    .m#{$infix}-auto { margin: auto !important; }
+    .mt#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-top: auto !important;
+    }
+    .mr#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-right: auto !important;
+    }
+    .mb#{$infix}-auto,
+    .my#{$infix}-auto {
+      margin-bottom: auto !important;
+    }
+    .ml#{$infix}-auto,
+    .mx#{$infix}-auto {
+      margin-left: auto !important;
+    }
+  }
+}

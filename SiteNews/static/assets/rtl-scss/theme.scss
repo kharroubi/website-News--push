@@ -1,0 +1,92 @@
+/*----------------------------------------------------------------------
+    * BootNews RTL - Magazine and Blog bootstrap template
+    * Copyright 2020 Bootstrap.News
+    * Licensed under Bootstrap.News (https://bootstrap.news/license/)
+------------------------------------------------------------------------*/
+//
+// Custom functions SCSS 
+//
+
+@import "custom/custom-functions";
+@import "custom/custom-variables";
+@import "custom/custom-mixins";
+
+//
+// Settings
+//
+
+@import "bootstrap/functions";
+@import "variables";
+@import "bootstrap/mixins";
+
+//
+// Theme scss
+//
+
+@import "theme/root/styles";
+@import "theme/color/color";
+@import "theme/animate-css/animate";
+@import "theme/google-font/google";
+@import "theme/card/card-full";
+@import "theme/main-nav/main-nav";
+@import "theme/main-nav/mega-menu";
+@import "theme/main-nav/dropdown-submenu";
+@import "theme/tabs/vertical-tabs";
+@import "theme/hamburger/hamburger";
+@import "theme/breadcrumb/bradcrumb";
+@import "theme/lazyload/lazyload";
+@import "theme/ratio/ratio";
+@import "theme/layout/layout";
+@import "theme/layout/sidebar";
+@import "theme/layout/footer";
+@import "theme/news-block/big-grid";
+@import "theme/news-block/block-title";
+@import "theme/news-block/news-block";
+@import "theme/news-block/breaking-news";
+@import "theme/back-top/back-top";
+@import "theme/mobile-menu/mobile-menu";
+@import "theme/post/post-page";
+@import "theme/post/suggestion-box";
+@import "theme/post/comment";
+@import "theme/post/archive";
+@import "theme/post/rating";
+@import "theme/post/tags";
+@import "theme/messages/messages";
+@import "theme/slider/owl";
+@import "theme/slider/vertical-slider";
+@import "theme/widget/maps";
+@import "theme/widget/social";
+@import "theme/widget/popular-post";
+@import "theme/widget/weather";
+@import "theme/widget/youtube";
+@import "theme/widget/score";
+@import "theme/widget/timeline";
+@import "theme/widget/widget";
+@import "theme/avatar/avatar";
+@import "theme/grid/grid";
+@import "theme/user/member-area";
+@import "theme/utilities/progress-bar";
+@import "theme/utilities/background-images";
+@import "theme/utilities/background-shadow";
+@import "theme/utilities/background-video";
+@import "theme/utilities/hover";
+@import "theme/utilities/zoom";
+@import "theme/utilities/typograpy";
+@import "theme/utilities/text";
+@import "theme/utilities/gradient";
+@import "theme/utilities/box-shadow";
+@import "theme/utilities/dark-skin";
+@import "theme/utilities/z-index";
+@import "theme/utilities/font-weight";
+@import "theme/utilities/spacing";
+@import "theme/utilities/position";
+@import "theme/utilities/clear";
+@import "theme/utilities/border-width";
+@import "theme/utilities/border-child";
+@import "theme/utilities/mobile-screen";
+
+//
+// Custom SCSS 
+//
+
+@import "custom/custom-styles";

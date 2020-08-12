@@ -1,0 +1,288 @@
+/*------------------------------------
+	Primary color
+------------------------------------*/
+@each $color, $value in $colors {
+  .color-#{$color} {
+		.bg-red, .bg-primary, .progress-bar, .badge-primary {
+			background-color:$value !important;
+		}
+		.center-backline, .center-backline-lg, .title-arrow {
+			&:before{
+				background-color:$value !important;
+			}
+		}
+		.box-title{
+			&:before {
+				border-top-color: $value;
+			}
+		}
+		.badge-primary{
+		    color:$white !important;
+		}
+		.fa-stack-sea {
+			border: $value 3px solid;
+		}
+		.form-control{
+			&:focus {
+				border-color: $value;
+			}
+		}
+		.prev-post-left, .next-post-right {
+			&> a {
+				color: #2f2e41;
+				&:hover {
+					color: $value;
+				}
+			}
+		}
+		.hover-a{
+			&:hover{
+			    .fa-play-circle {
+					background: $value;
+					border: $value 2px solid;
+				}
+			}
+		}
+		.page-link, .btn-link {
+		    color: $value;
+		}
+		a{
+			&.btn {
+				color: $white;
+				&.back-top {
+					color:$black;
+				}
+				&.btn-outline-primary{
+					color: $value;
+					&:hover{
+						color: $white;
+					}
+				}
+			}
+		    &:hover{
+		       color: $value;
+		    }
+		}
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+			&> a{
+				&:hover {
+	                color: $value;
+				}
+			}
+		}
+		.hover-a{
+			&:hover{
+				h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
+					&> a {
+	                    color: $value;
+					}
+				}
+			}
+		}
+		.hover-mode {
+			.main-nav {
+				li{
+					&:hover {
+						&> a {
+							color: $value;
+						}
+					}
+				}
+			}
+		}
+		.nav-tabs {
+			.nav-link {
+				&.active{
+					color: $value;
+				}
+			}
+			.nav-item{
+				&.show{
+					.nav-link {
+	                    color: $value;
+					}
+				}
+			}
+
+		}
+		.nav-item:hover .nav-link, .navbar-nav .dropdown-item:hover, #main-menu .vertical-tabs .nav-tabs .nav-link.active, .dropdown-item.active, .dropdown-item:active, a{
+		  color: $value;
+		}
+		.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .navbar-light .nav-item:hover .nav-link, .navbar-nav .dropdown-item:hover, .text-primary {
+			color: $value !important;
+		}
+
+		.nav-pills .nav-link.active, .nav-pills .show > .nav-link, .custom-range::-ms-thumb, .custom-range::-moz-range-thumb, .custom-range::-webkit-slider-thumb, .custom-radio .custom-control-input:checked ~ .custom-control-label::before, .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before, .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before, .custom-control-input:checked ~ .custom-control-label::before, .dropdown-item.active, .dropdown-item:active {
+			background-color: $value;
+		}
+		.dropdown-menu.mega .container, .dropdown-menu, .border-primary {
+			border-color: $value !important;
+		}
+		.list-group-item.active, .btn-outline-primary {
+			color: $value;
+			border-color: $value;
+		}
+		.page-link:hover, .page-item.active .page-link, .btn-primary, .btn-outline-primary:hover,.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+			background-color: $value;
+			border-color: $value;
+		}
+		.big-nav .list-group-item.active {
+			color:$white;
+			background-color: $value;
+			border-color: $value;
+		}
+		.big-nav.carousel-indicators li:hover {
+			background-color: $value;
+			color: $white;
+		}
+		.hover-a li:hover a {
+			color: $value;
+		}
+		li:hover a.h5{
+			color: $value;
+		}
+		.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+			color: $white;
+			background-color: $value;
+			border-color: $value;
+		}
+		.sidetabs .nav-link.active:hover {
+			border-color: $value;
+		}
+		.card-list li:hover a {
+			color: $value;
+		}
+		.nav-block-link li a.nav-link.active,.nav-block-link1 li a.nav-link.active,.nav-block-link2 li a.nav-link.active,.nav-block-link3 li a.nav-link.active,.nav-block-link4 li a.nav-link.active,.nav-block-link5 li a.nav-link.active,.nav-block-link6 li a.nav-link.active,.nav-block-link7 li a.nav-link.active,.nav-block-more li a.nav-link.active {
+			color: $value !important;
+			background-color: transparent;
+		}
+		.side-link li a:hover, .side-link li a.active, .sidebar-link li a:hover, .sidebar-link li a.active {
+		    background-color: transparent;
+		    color: $value;
+		}
+		.side-link li ul li a:hover, .sidebar-link li ul li a:hover {
+		    color: $value;
+		}
+		.side-link li a.caret-collapse, .sidebar-link li a.caret-collapse {
+		    color: $value;
+		}
+		.side-link li a.caret-collapse.collapsed:hover, .sidebar-link li a.caret-collapse.collapsed:hover {
+		    color: $value;
+		}
+		.side-link li a.caret-collapse.collapsed, .sidebar-link li a.caret-collapse.collapsed {
+		    color: $font-color;
+		}
+		.main-menu.navbar-dark .navbar-nav .nav-item.active, .main-menu.navbar-dark .navbar-nav .nav-item:hover {
+		    background: $value;
+	    }
+	    &.dark-skin {
+			color: $white !important;
+		    a {
+				color: $value;
+				&.btn {
+					color: $white;
+				}
+				.text-white {
+					color: $white !important;
+				}
+		    }
+	    }
+	    .post-number li:hover a::before {
+		    color: $value !important;
+		}
+		.timeline-post > li a .timeline-date:hover, .timeline-post > li a .timeline-title:hover {
+            color: $value !important;
+		}
+        .timeline-post > li:hover:before {
+		    background: $value !important;
+		}
+		.widget ol li a:hover, .widget ul li a:hover {
+		    color: $value;
+		}
+	}
+}
+/*------------------------------------
+	Secondary color
+------------------------------------*/
+@each $color, $value in $colors {
+    .scolor-#{$color}{
+		.bg-secondary{
+			background-color: $value !important; 
+		}
+		.btn-secondary {
+			color: $white;
+			background-color: $value;
+			border-color: $value;
+		}
+		.btn-secondary:hover {
+			background-color: $value;
+			border-color: $value;
+		}
+		.btn-secondary.disabled, .btn-secondary:disabled {
+			background-color: $value;
+			border-color: $value;
+		}
+		.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+		.show > .btn-secondary.dropdown-toggle {
+			background-color: $value;
+			border-color: $value;
+		}
+		.btn-outline-secondary {
+			color: $value;
+			border-color: $value;
+		}
+		.btn-outline-secondary:hover {
+			background-color: $value;
+			border-color: $value;
+		}
+		.btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
+			color: $value;
+		}
+		.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active,
+		.show > .btn-outline-secondary.dropdown-toggle {
+			background-color: $value;
+			border-color: $value;
+		}
+		.badge-secondary {
+			color: $white;
+			background-color: $value;
+		}
+		.badge-secondary[href]:hover, .badge-secondary[href]:focus {
+			color: $white;
+			background-color: $value;
+		}
+		.alert-secondary .alert-link {
+			color: $value;
+		}
+		.list-group-item-secondary {
+			color: $value;
+		}
+		.list-group-item-secondary.list-group-item-action:hover, .list-group-item-secondary.list-group-item-action:focus {
+			color: $value;
+		}
+		.list-group-item-secondary.list-group-item-action.active {
+			background-color: $value;
+			border-color: $value;
+		}
+		a.bg-secondary:hover, a.bg-secondary:focus,
+		button.bg-secondary:hover,
+		button.bg-secondary:focus {
+			background-color: $value !important;
+		}
+		.border-secondary {
+			border-color: $value !important;
+		}
+		.text-secondary {
+			color: $value !important;
+		}
+		a.text-secondary:hover, a.text-secondary:focus {
+			color: $value !important;
+		}
+	}
+}
+/*------------------------------------
+	Default color
+------------------------------------*/
+.bg-black {
+	background: $black;
+}

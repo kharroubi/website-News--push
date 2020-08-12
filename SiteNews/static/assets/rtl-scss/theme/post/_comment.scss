@@ -1,0 +1,72 @@
+/*------------------------------------
+	Comment
+------------------------------------*/
+.comment-list {
+	li {
+		list-style: none;
+		margin-top: $comment-list-top;
+		.user-comment {
+			border-bottom: $comment-article-b-bottom;
+			padding-bottom: $comment-article-p-bottom;
+			.comment-author {
+				.avatar {
+					float: right;
+					margin-left: 1rem;
+				}
+			}
+			.title-comments {
+				.authors {
+					font-weight: $font-weight-bold;
+				}
+			}
+			.comment-content {
+				p {
+					margin-bottom: $comment-p;
+				}
+			}
+		}
+		.sub-comment {
+			margin-left: $subcomment-margin-left;
+			.sub-comment {
+				margin-right: $sub-subcomment-mobile-margin-left;
+			}
+		}
+	}
+}
+.comment-awaiting-moderation {
+    background: $yellow;
+}
+@include media-breakpoint-up(sm) {
+	.comment-list {
+		li{
+			.sub-comment {
+				.sub-comment {
+					margin-right: $sub-subcomment-margin-left;
+				}
+			}
+		}
+		.title-comments {
+			.dates {
+				float: left;
+			}
+		}
+	}
+}
+// widget comments
+.recentcomments{
+	a {
+		font-style: italic;
+		font-family: $font_3, Helvetica, $font_4 !important;
+		font-size: 0.875rem;
+	}
+	.comment-author-link {
+		font-style: italic;
+		font-family: $font_3, Helvetica, $font_4 !important;
+		font-size: 0.875rem;
+		a {
+			&.url{
+				color: $color_a !important;
+			}
+		}
+	}
+}

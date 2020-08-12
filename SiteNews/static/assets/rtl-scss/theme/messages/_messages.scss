@@ -1,0 +1,60 @@
+/*------------------------------------
+  Messages
+------------------------------------*/
+.unread {
+	cursor: pointer;
+	background-color: $unread-bg;
+}
+.messages-box {
+	max-height: $messages-box-max-height;
+	overflow: auto;
+}
+.online-circle {
+	border-radius: $online-circle-radius;
+	width: $online-circle-width;
+	height: $online-circle-height;
+}
+.messages-title {
+	float: left;
+	margin: $messages-right-margin;
+}
+.message-img {
+	float: left;
+	margin: $messages-right-margin;
+}
+.message-header {
+	text-align: left;
+	width: 100%;
+	margin-bottom: $messages-header-bottom;
+}
+.text-editor {
+	min-height: $text-editor-min-height;
+}
+.messages-list li {
+	&.messages-you {
+		.messages-title {
+			float: right;
+		}
+		.message-img {
+			float: right;
+		}
+		p {
+			float: right;
+			text-align: right;
+		}
+		.message-header {
+			text-align: right;
+		}
+	}
+	p {
+		max-width: 60%;
+		padding: $messages-list-p-padding;
+		border: $messages-list-p-border;
+	}
+	&.messages-me p {
+		float: left;
+	}
+}
+.ql-editor p {
+	font-size: $text-editor-font-size;
+}

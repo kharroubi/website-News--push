@@ -1,0 +1,509 @@
+{% load static %}
+{% include "javascript.html"%}
+{% include "head_css.html"%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <title>Homepage - BootNews Magazine</title>
+  <!--Seo meta tags-->
+  <meta name="description" content="Bootstrap News Template make your news site project easy, fast loading and look professional">
+  <meta name="keywords" content="bootstrap news, bootstrap portal, bootstrap blog, bootstrap magazine">
+  <!--Required Meta Tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--Robot meta tags-->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <!--App manifest-->
+  <link rel="manifest" href="../../assets/js/manifest.json">
+  <!--Favicon-->
+
+  <!--Google Fonts-->
+
+</head>
+
+<body class="boxed bg-repeat font-family">
+  <!--Skippy-->
+  <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+    <div class="container">
+      <span class="skiplink-text">Skip to main content</span>
+    </div>
+  </a>
+
+
+  <!--Background image-->
+  <div class="bg-image"></div>
+  <!-- ========== WRAPPER ========== -->
+  <div class="wrapper">
+    <!--Header start-->
+    <header class="header">
+      <!--top mobile menu start-->
+      <div class="top-menu bg-white">
+        <div class="container">
+          <!--Navbar Mobile-->
+          <nav class="navbar navbar-expand d-lg-none navbar-light px-0">
+            <div id="navbar-mobile" class="collapse navbar-collapse nav-top-mobile">
+              <!--Top left menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link"    href="../pages/about-us.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html"> توصل معنا</a></li>
+              </ul>
+              <!--Top right menu-->
+              <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item"><a class="nav-link" href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://vimeo.com" target="_blank"><i class="fab fa-vimeo"></i></a></li>
+              </ul>
+              <!--end top right menu-->
+            </div>
+          </nav>
+          <!-- End Navbar Mobile-->
+        </div>
+
+
+
+      </div>
+      <!-- end top mobile menu -->
+
+      <!-- top menu -->
+      <div class="top-menu bg-light-dark">
+        <div class="container">
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light   px-0 py-0">
+            <!--Hamburger button-->
+            <a id="showLeftPush" class="navbar-toggler side-hamburger border-0 px-0" href="#">
+              <span class="hamburger-icon">
+                <span></span><span></span><span></span><span></span>
+              </span>
+            </a>
+            <!-- Mobile logo -->
+            <a href="index.html">
+              <img class="mobile-logo img-fluid d-lg-none mx-auto" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
+            </a>
+            <!--Right Toggle Button-->
+            <button class="navbar-toggler px-0" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="fa fa-search"></span>
+            </button>
+            <!--Top Navbar-->
+            <div id="navbarTogglerDemo" class="collapse navbar-collapse">
+              <!-- Time -->
+              <div class="date-area d-none d-lg-block">
+                <time class="navbar-text mr-2" datetime="2019-10-28">
+                <iframe src="https://www.now-time.com/widgetclock/justnumber.php?id=77&size=33&color=244CFF&format=2&thedatein=2&backcolor=F6F6F6" frameBorder="0"></iframe>  </div>
+              <!--Top left menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#">الصفحة الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html">تواصل معنا</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" target="_blank">خريطة الموقع</a></li>
+              </ul>
+              <!--end top left menu-->
+              <!--Top right menu-->
+              <ul class="navbar-nav ml-auto text-center">
+                <li class="nav-item"><a class="nav-link" href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://vimeo.com" target="_blank"><i class="fab fa-vimeo"></i></a></li>
+              </ul>
+              <!--end top right menu-->
+            </div>
+          </nav>
+          <!-- End Navbar -->
+        </div>
+      </div>
+      <!--end top menu-->
+
+      <!--start second header-->
+      <div class="second-header">
+        <div class="container">
+          <div class="row">
+            <!--Left content logo-->
+            <div class="col-lg-4">
+              <div id="main-logo" class="main-logo my-2 my-lg-4 d-none d-lg-block">
+                <a class="navbar-brand" href="index.html">
+                  <img class="img-fluid" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
+                </a>
+              </div>
+            </div>
+            <!--Right content ads-->
+            <div class="col-lg-8">
+              <div class="my-2 my-md-3 my-lg-4 d-none d-md-block text-center">
+                <a href="#" target="_blank">
+                  <img class="img-fluid bg-light" src="{% static 'assets/img/ads/728-demo2.png'%}" alt="Advertiser space">
+                </a>
+              </div>
+            </div>
+            <!--search mobile-->
+            <div class="collapse navbar-collapse col-12 py-2" id="navbarTogglerDemo2">
+              <form class="form-inline" action="{% static 'category/search.html'%}">
+                <div class="input-group w-100 bg-white">
+                  <input type="text" class="form-control border border-right-0" placeholder="Search..." aria-label="search">
+                  <div class="input-group-prepend bg-light-dark">
+                    <button class="btn bg-transparent border-left-0 input-group-text border" type="submit"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!--end search mobile-->
+          </div>
+        </div>
+      </div>
+      <!--End second header-->
+    </header>
+    <!--End header-->
+
+    <!--Main menu-->
+
+    <!-- End main menu -->
+
+    <!-- sidebar mobile menu -->
+
+    <!-- end sidebar mobile menu -->
+
+    <!--Content start-- **************** -->
+
+
+      
+
+
+
+=====================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--End Content-->
+
+    <!--Footer start-->
+
+
+    
+    <footer>
+      <!--Footer content-->
+      <div id="footer" class="footer-dark bg-dark bg-footer py-5 px-3">
+        <div class="container">
+          <div class="row">
+            <!-- left widget -->
+            <div class="widget col-md-4">
+              <h3 class="h5 widget-title border-bottom border-smooth">About Us</h3>
+              <div class="widget-content">
+                <img class="footer-logo img-fluid mb-2" src="../../assets/img/logo/logo-mobile.png" alt="footer logo">
+                <p>قوالب تمهيد المجلات الإخبارية. تم تصميم هذا العرض التوضيحي خصيصًا لعرض استخدام السمة كموقع للمجلة. قم بزيارة صفحتنا الرئيسية لمزيد من العروض التوضيحية.
+</p>
+                <address><i class="fa fa-map-marker-alt"></i> Amphitheatre, Mountain View,<br>
+                  San Francisco, CA 9321, United States
+                </address>
+                <p class="footer-info"><i class="fa fa-phone"></i> +(123) 456-7890</p>
+                <p class="footer-info"><i class="fa fa-envelope"></i> support@example.com</p>
+                <p></p>
+                <div class="social mb-4">
+                  <!--facebook-->
+                  <span class="my-2 mr-3">
+                    <a target="_blank" href="https://facebook.com" title="Facebook"><i class="fab fa-facebook fa-2x"></i></a>
+                  </span>
+                  <!--twitter-->
+                  <span class="my-2 mr-3">
+                    <a target="_blank" href="https://twitter.com" title="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+                  </span>
+                  <!--youtube-->
+                  <span class="my-2 mr-3">
+                    <a target="_blank" href="https://youtube.com" title="Youtube"><i class="fab fa-youtube fa-2x"></i></a>
+                  </span>
+                  <!--instagram-->
+                  <span class="my-2 mr-3">
+                    <a target="_blank" href="https://instagram.com" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                  </span>
+                  <!--end instagram-->
+                </div>
+              </div>
+            </div>
+            <!-- center widget -->
+            <div class="widget col-sm-6 col-md-4">
+              <h3 class="h5 widget-title border-bottom border-smooth">منشورات شائعة</h3>
+              <div class="posts-list">
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img6.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">ذهب لماذا أبل في حرب مع الفيسبوك وجوجل هذا الأسبوع
+</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-16">Oct 16, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img5.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">كان يأمل في الديمقراطية في تركيا. كانت لدى أردوغان أفكار أخرى
+
+</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-15">Oct 15, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img4.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">يتذكر التسبب في نقص أدوية ضغط الدم: ما يمكنك القيام به
+</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-14">Oct 14, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--End post list-->
+              </div>
+            </div>
+            <!-- right widget -->
+            <div class="widget col-sm-6 col-md-4">
+              <h3 class="h5 widget-title border-bottom border-smooth">اختيارات المحرر
+</h3>
+              <div class="posts-list">
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img3.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">كان الغرب يأمل في الديمقراطية في تركيا. كانت لدى أردوغان أفكار أخرى
+</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-16">Oct 16, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img2.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">دايل Earnhardt الابن للعودة إلى مضمار السباق والطموح قديم</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-15">Oct 15, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--post list-->
+                <article class="card card-full hover-a mb-4">
+                  <div class="row">
+                    <!--thumbnail-->
+                    <div class="col-3 col-md-4 pr-2 pr-md-0">
+                      <div class="ratio_115-80 image-wrapper">
+                        <a href="../post/single1.html">
+                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img1.jpg" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <!-- title & date -->
+                    <div class="col-9 col-md-8">
+                      <div class="card-body pt-0">
+                        <h3 class="card-title h6">
+                          <a href="../post/single1.html">Yankees Party Like It’s 1998, at Least for a Day</a>
+                        </h3>
+                        <div class="card-text small text-muted">
+                          <time datetime="2019-10-14">Oct 14, 2019</time>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!--End post list-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End footer content-->
+      <!-- footer copyright menu -->
+      <div class="footer-copyright bg-secondary">
+        <div class="container">
+          <!--Navbar-->
+          <nav class="navbar navbar-expand navbar-dark px-0">
+            <!--footer left menu-->
+            <ul class="navbar-nav footer-nav text-center first-left-lg-0">
+              <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">عن الموقع</a></li>
+              <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html">تواصل معنا</a></li>
+              <li class="nav-item"><a class="nav-link" href="../pages/term-of-use.html">الصفحة الرئيسية</a></li>
+
+            </ul>
+            <!--end footer left menu-->
+            <!-- footer copyright -->
+            <ul class="navbar-nav ml-auto text-center">
+              <li class="d-inline navbar-text">Copyright &copy; جميع الحقوق محفوظة.</li>
+            </ul>
+            <!-- end footer copyright -->
+          </nav>
+          <!-- End Navbar -->
+        </div>
+      </div>
+      <!--end copyright menu-->
+    </footer>
+    <!-- End Footer -->
+  </div>
+  <!-- ========== END WRAPPER ========== -->
+  <!--Back to top-->
+  <a class="material-scrolltop back-top btn btn-light border position-fixed r-1 b-1" href="#"><i class="fa fa-arrow-up"></i></a>
+
+  <!--BOOTSTRAP CUSTOMIZER PLUGIN-->
+  <div id="switcher" class="d-none d-md-block">
+    <!--settings-->
+    <div id="theme-settings"><i class="fas fa-cog"></i></div>
+    <!--title-->
+    <h4 class="text-primary">Customizer</h4>
+    <!-- reload -->
+    <a href="javascript:window.location.reload(true)" class="position-absolute t-1 r-1" title="Reset customize"><i class="fa fa-sync-alt"></i></a>
+    <div class="demo-area">
+      <!--Layout style-->
+      <h6>Layout Style</h6>
+      <ul class="theme-starter">
+        <li><a id="ly-fullwidth" class="badge border" href="#">Fullwidth</a></li>
+        <li><a id="ly-boxed" class="badge border" href="#">Boxed</a></li>
+        <li><a id="ly-framed" class="badge border" href="#">Framed</a></li>
+      </ul>
+      <!-- skin -->
+      <h6>Skin style</h6>
+      <ul class="theme-skin">
+        <li><a id="skin-light" class="badge border" href="#">Light</a></li>
+        <li><a id="skin-dark" class="badge border" href="#">Dark</a></li>
+        <li><a id="skin-dark2" class="badge border" href="#">Dark Nav</a></li>
+      </ul>
+      <!--primary color-->
+      <h6>Primary Color</h6>
+      <ul class="theme-colors">
+        <li><a class="blue badge" data-color="blue" title="Blue (default)" href="#"><span class="d-none">Blue</span></a></li>
+        <li><a class="purple badge" data-color="purple" title="Purple" href="#"><span class="d-none">Purple</span></a></li>
+        <li><a class="red badge" data-color="red" title="Red" href="#"><span class="d-none">Red</span></a></li>
+        <li><a class="pink badge" data-color="pink" title="Pink" href="#"><span class="d-none">Pink</span></a></li>
+        <li><a class="orange badge" data-color="orange" title="Orange" href="#"><span class="d-none">Orange</span></a></li>
+        <li><a class="darkblue badge" data-color="darkblue" title="Dark Blue" href="#"><span class="d-none">Dark Blue</span></a></li>
+        <li><a class="lightblue badge" data-color="lightblue" title="Light Blue" href="#"><span class="d-none">Light Blue</span></a></li>
+        <li><a class="green badge" data-color="green" title="Green" href="#"><span class="d-none">Green</span></a></li>
+        <li><a class="yellow badge" data-color="yellow" title="Yellow" href="#"><span class="d-none">Yellow</span></a></li>
+        <li><a class="blacksoft badge" data-color="blacksoft" title="Black Soft" href="#"><span class="d-none">Black Soft</span></a></li>
+      </ul>
+      <!--secondary color-->
+      <h6>Secondary Color</h6>
+      <ul class="second-colors">
+        <li><a class="black badge" data-scolor="black" title="Black (default)" href="#"><span class="d-none">Black (default)</span></a></li>
+        <li><a class="red badge" data-scolor="red" title="Red" href="#"><span class="d-none">Red</span></a></li>
+        <li><a class="blue badge" data-scolor="blue" title="Blue" href="#"><span class="d-none">Blue</span></a></li>
+        <li><a class="pink badge" data-scolor="pink" title="Pink" href="#"><span class="d-none">Pink</span></a></li>
+        <li><a class="orange badge" data-scolor="orange" title="Orange" href="#"><span class="d-none">Orange</span></a></li>
+        <li><a class="darkblue badge" data-scolor="darkblue" title="Dark Blue" href="#"><span class="d-none">Dark Blue</span></a></li>
+        <li><a class="lightblue badge" data-scolor="lightblue" title="Light Blue" href="#"><span class="d-none">Light Blue</span></a></li>
+        <li><a class="purple badge" data-scolor="purple" title="Purple" href="#"><span class="d-none">Purple</span></a></li>
+        <li><a class="green badge" data-scolor="green" title="Green" href="#"><span class="d-none">Green</span></a></li>
+        <li><a class="blacksoft badge" data-scolor="blacksoft" title="Black Soft" href="#"><span class="d-none">Black Soft</span></a></li>
+      </ul>
+      <!--background style-->
+      <h6>Background Boxed</h6>
+      <ul class="bg-img">
+        <li><a class="badge border" data-bg="cover" href="#"><span>Cover 1</span></a></li>
+        <li><a class="badge border" data-bg="cover2" href="#"><span>Cover 2</span></a></li>
+        <li><a class="badge border" data-bg="cover3" href="#"><span>Cover 3</span></a></li>
+        <li><a class="badge border" data-bg="repeat" href="#"><span>Patern 1</span></a></li>
+        <li><a class="badge border" data-bg="repeat2" href="#"><span>Patern 2</span></a></li>
+        <li><a class="badge border" data-bg="repeat3" href="#"><span>Patern 3</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END BOOTSTRAP CUSTOMIZER PLUGIN-->
+
+
+  <!--Bootstrap Customizer js-->
+
+
+
+
+</body>
+
+</html>
