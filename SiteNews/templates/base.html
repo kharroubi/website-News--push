@@ -1,7 +1,5 @@
 {% load static %}
-{% include "javascript.html"%}
-{% include "head_css.html"%}
-
+{% include "javascript.html" %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +16,29 @@
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   <!--App manifest-->
-  <link rel="manifest" href="../../assets/js/manifest.json">
+  <link rel="manifest" href="{% static 'assets/js/manifest.json' %}">
   <!--Favicon-->
-
-  <!--Google Fonts-->
+  <link rel="shortcut icon" href="{% static 'assets/img/favicon/favicon.ico' %}" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/img/favicon/apple-icon-57x57.png' %}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/img/favicon/apple-icon-60x60.png' %}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/img/favicon/apple-icon-72x72.png' %}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/favicon/apple-icon-76x76.png' %}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/img/favicon/apple-icon-114x114.png' %}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/img/favicon/apple-icon-120x120.png' %}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/img/favicon/apple-icon-144x144.png' %}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/img/favicon/apple-icon-152x152.png' %}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicon/apple-icon-180x180.png' %}">
+  <link rel="icon" type="image/png" sizes="192x192" href="{% static 'assets/img/favicon/android-icon-192x192.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon/favicon-96x96.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicon/favicon-16x16.png' %}">
+  <link rel="mask-icon" href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}" color="#2196f3">
+  <meta name="msapplication-config" content="{% static 'assets/img/favicon/browserconfig.xml' %}" />
+  <meta name="msapplication-TileImage" content="{% static 'assets/img/favicon/ms-icon-144x144.png' %}">
+  <meta name="msapplication-TileColor" content="#2196f3">
+  <meta name="theme-color" content="#ffffff">
 
 </head>
-
 <body class="boxed bg-repeat font-family">
   <!--Skippy-->
   <a id="skippy" class="sr-only sr-only-focusable" href="#content">
@@ -92,9 +106,7 @@
             <!--Top Navbar-->
             <div id="navbarTogglerDemo" class="collapse navbar-collapse">
               <!-- Time -->
-              <div class="date-area d-none d-lg-block">
-                <time class="navbar-text mr-2" datetime="2019-10-28">
-                <iframe src="https://www.now-time.com/widgetclock/justnumber.php?id=77&size=33&color=244CFF&format=2&thedatein=2&backcolor=F6F6F6" frameBorder="0"></iframe>  </div>
+
               <!--Top left menu-->
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link active" href="#">الصفحة الرئيسية</a></li>
@@ -159,43 +171,498 @@
     <!--End header-->
 
     <!--Main menu-->
+    <div id="showbacktop" class="full-nav bg-white border-none border-lg-1 border-bottom shadow-b-sm py-0">
+      <div class="container">
+        <nav id="main-menu" class="main-menu navbar navbar-expand-lg navbar-light px-2 px-lg-0 py-0">
+          <!--Navbar menu-->
+          <div id="navbarTogglerDemo1" class="collapse navbar-collapse hover-mode">
+            <!-- logo in navbar -->
+            <div class="logo-showbacktop">
+              <a href="index.html">
+                <img class="img-fluid" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
+              </a>
+            </div>
 
+            <!--left main menu start-->
+            <ul id="left-main" class="navbar-nav main-nav navbar-uppercase first-left-lg-0">
+              <li class="nav-item">
+                <a id="navbarhome" class="nav-link active" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الصفحة الرئيسية</a>
+                <!--link-->
+               <!-- end link -->
+              </li>
+              <li class="nav-item"><a class="nav-link" href="{% static 'category/category.html'%}">أعمال</a></li>
+              <!--mega menu-->
+              <li class="nav-item mega-dropdown">
+                <a id="navbarmega2" class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">سفر</a>
+
+              </li>
+              <!--end mega menu-->
+              <!--mega menu-->
+
+              <li class="nav-item mega-dropdown">
+                <a id="navbarmega4" class="nav-link " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">سياسة</a>
+                <!--content mega-->
+
+              </li>
+              <!--end mega menu-->
+              <!--dropdown menu-->
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown1" class="nav-link " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">منوعات</a>
+                <!--link-->
+              </li>
+
+
+
+              <li class="nav-item mega-dropdown">
+                <a id="navbarmega3" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">فيديو</a>
+                <div class="dropdown-menu mega w-100 p-4" aria-labelledby="navbarmega3">
+                  <div class="row">
+                    <!--video post start-->
+                     <article class="col-6 col-lg-3">
+                      <div class="card card-full hover-a mb-4">
+                        <!--thumbnail, category & icon-->
+                        <div class="ratio_251-141 image-wrapper">
+                          <a href="{% static 'post/single6.html'%}">
+                            <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{% static 'assets/img/251x141/img1.jpg'%}" alt="Image description">
+                            <div class="post-type-icon">
+                              <span class="fa-stack-sea">
+                                <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                                <i class="fas fa-play fa-stack-1x text-primary"></i>
+                              </span>
+                            </div>
+                          </a>
+                          <a class="position-absolute m-2 t-0 p-1 badge badge-primary" href="{% static 'category/category.html'%}">موضة</a>
+                        </div>
+                        <!-- title, date & comments -->
+                        <div class="card-body">
+                          <h3 class="card-title h6">
+                            <a href="{% static 'post/single6.html'%}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
+                          </h3>
+                          <div class="card-text text-muted small">
+                            <time datetime="2020-10-22">Oct 22, 2019</time>
+                            <span title="122 comment" class="float-right">
+                              <span class="fa fa-comments" aria-hidden="true"></span> 122
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!--video post start-->
+                     <article class="col-6 col-lg-3">
+                      <div class="card card-full hover-a mb-4">
+                        <!--thumbnail, category & icon-->
+                        <div class="ratio_251-141 image-wrapper">
+                          <a href="{% static 'post/single6.html'%}">
+                            <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{% static 'assets/img/251x141/img1.jpg'%}" alt="Image description">
+                            <div class="post-type-icon">
+                              <span class="fa-stack-sea">
+                                <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                                <i class="fas fa-play fa-stack-1x text-primary"></i>
+                              </span>
+                            </div>
+                          </a>
+                          <a class="position-absolute m-2 t-0 p-1 badge badge-primary" href="{% static 'category/category.html'%}">موضة</a>
+                        </div>
+                        <!-- title, date & comments -->
+                        <div class="card-body">
+                          <h3 class="card-title h6">
+                            <a href="{% static 'post/single6.html'%}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
+                          </h3>
+                          <div class="card-text text-muted small">
+                            <time datetime="2020-10-22">Oct 22, 2019</time>
+                            <span title="12 comment" class="float-right">
+                              <span class="fa fa-comments" aria-hidden="true"></span> 18
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!--video post start-->
+                    <article class="col-6 col-lg-3">
+                      <div class="card card-full hover-a mb-4">
+                        <!--thumbnail, category & icon-->
+                        <div class="ratio_360-202 image-wrapper">
+                          <a href="../post/single6.html">
+                            <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="{% static 'assets/img/251x141/img3.jpg'%}" alt="Image description">
+                            <div class="post-type-icon">
+                              <span class="fa-stack-sea">
+                                <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                                <i class="fas fa-play fa-stack-1x text-primary"></i>
+                              </span>
+                            </div>
+                          </a>
+                          <a class="position-absolute m-2 t-0 p-1 badge badge-primary" href="../category/category.html">Fashion</a>
+                        </div>
+                        <!-- title, date & comments -->
+                        <div class="card-body">
+                          <h3 class="card-title h6">
+                            <a href="../post/single6.html">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد </a>
+                          </h3>
+                          <div class="card-text text-muted small">
+                            <time datetime="2019-10-20">Oct 20, 2019</time>
+                            <span title="8 comment" class="float-right">
+                              <span class="fa fa-comments" aria-hidden="true"></span> 81
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!--video post start-->
+                    <article class="col-6 col-lg-3">
+                      <div class="card card-full hover-a mb-4">
+                        <!--thumbnail, category & icon-->
+                        <div class="ratio_360-202 image-wrapper">
+                          <a href="../post/single6.html">
+                            <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="{% static 'assets/img/251x141/img3.jpg'%}" alt="Image description">
+                            <div class="post-type-icon">
+                              <span class="fa-stack-sea">
+                                <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
+                                <i class="fas fa-play fa-stack-1x text-primary"></i>
+                              </span>
+                            </div>
+                          </a>
+                          <a class="position-absolute m-2 t-0 p-1 badge badge-primary" href="../category/category.html">موضة</a>
+                        </div>
+                        <!-- title, date & comments -->
+                        <div class="card-body">
+                          <h3 class="card-title h6">
+                            <a href="../post/single6.html">جولة في محافظة  مدينة الذهب  </a>
+                          </h3>
+                          <div class="card-text text-muted small">
+                            <time datetime="2019-10-20">Oct 20, 2019</time>
+                            <span title="8 comment" class="float-right">
+                              <span class="fa fa-comments" aria-hidden="true"></span> 91
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <!--end video post-->
+                  </div>
+                </div>
+              </li>
+              <!--end mega menu-->
+              <!--dropdown submenu-->
+              <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">نمط حياة</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!--sub menu-->
+                  <li class="dropdown">
+                    <a id="sub1" class="dropdown-item " href="#" data-toggle="" aria-haspopup="true" aria-expanded="false">مغامرة</a>
+                    <!--link-->
+                    </li>
+                  <!--end submenu-->
+                  <!--submenu-->
+                  <li class="dropdown">
+                    <a id="sub2" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">موضة</a>
+                    <!--link-->
+
+                  </li>
+                  <!--end submenu-->
+                  <!--submenu-->
+                  <li class="dropdown">
+                    <a id="sub3" class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">طعام</a>
+                    <!--link-->
+
+                  </li>
+
+                  <li class="dropdown">
+                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">علوم</a>
+                  </li>
+                  <li class="dropdown">
+                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تقنية</a>
+                  </li>
+                  <li class="dropdown">
+                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">فلك</a>
+                  </li>
+                </ul>
+              </li>
+              <!--end dropdown submenu-->
+              <!--mega menu-->
+
+              <!--end dropdown menu-->
+
+
+            </ul>
+            <!--end left main menu-->
+
+            <!--Search form-->
+            <div class="navbar-nav ml-auto d-none d-lg-block">
+              <div class="dropdown dropleft">
+                <!--button-->
+                <button id="dropdownMenuButton" class="btn btn-light bg-transparent border-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-search"></i>
+                </button>
+                <!--hide search-->
+                <div class="dropdown-menu no-shadow border-0 py-0" aria-labelledby="dropdownMenuButton">
+                  <form class="form-inline" action="../category/search.html">
+                    <div class="input-group">
+                      <input type="text" class="form-control" name="keywords" value="" placeholder="Search..." aria-label="search">
+                    </div>
+                  </form>
+                </div>
+                <!--end hide search-->
+              </div>
+            </div>
+            <!--end search form-->
+          </div>
+          <!--End navbar menu-->
+        </nav>
+      </div>
+    </div>
     <!-- End main menu -->
 
     <!-- sidebar mobile menu -->
-
+    <div class="mobile-side">
+      <!--Left Mobile menu-->
+      <a href="#" class="back-menu">
+        <span class="hamburger-icon open">
+          <span></span><span></span><span></span><span></span>
+        </span>
+      </a>
+      <nav id="mobile-menu" class="menu-mobile d-flex flex-column push push-left shadow-r-sm bg-white">
+        <!-- mobile menu content -->
+        <div class="mobile-content mb-auto">
+          <!--logo-->
+          <div class="logo-sidenav p-2">
+            <a href="index.html">
+              <img src="{% static 'assets/img/logo/default-logo.png'%}" class="img-fluid" alt="logo">
+            </a>
+          </div>
+          <!--navigation-->
+          <div class="sidenav-menu">
+            <nav class="navbar navbar-inverse">
+              <ul id="side-menu" class="nav navbar-nav list-group list-unstyled side-link">
+                <li class="menu-item nav-item"><a href="#" class="nav-link active">الصفحة الرئيسية</a></li>
+                <!-- dropdown menu start -->
+                <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
+                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-11">اعمال</a>
+                  <!-- dropdown content -->
+                  <ul class="dropdown-menu" aria-labelledby="menu-11" role="menu">
+                    <li class="menu-item nav-item">
+                      <a href="../category/category.html" class="dropdown-item">تجارة</a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- end dropdown menu -->
+                <li class="menu-item nav-item"><a href="../category/category.html" class="nav-link">اقتصاد</a></li>
+                <!-- dropdown menu start -->
+                <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
+                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-12">نمط حيات</a>
+                  <!-- dropdown content -->
+                  <ul class="dropdown-menu" aria-labelledby="menu-12" role="menu">
+                    <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">موضة</a></li>
+                    <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
+                      <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" id="menu-13">سفر</a>
+                      <!-- dropdown submenu -->
+                      <ul class="dropdown-menu" aria-labelledby="menu-13" role="menu">
+                        <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">مغامرات</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
+                      <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" id="menu-14">علوم</a>
+                      <ul class="dropdown-menu" aria-labelledby="menu-14" role="menu">
+                        <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">صحة</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <!-- end dropdown menu -->
+                <!-- dropdown menu start -->
+                <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
+                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-15">رياضة</a>
+                  <!-- dropdown content -->
+                  <ul class="dropdown-menu" aria-labelledby="menu-15" role="menu">
+                    <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">سيارات</a></li>
+                    <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">كرة قدم</a></li>
+                    <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">العاب قوى</a></li>
+                    <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">تنس</a></li>
+                  </ul>
+                </li>
+                <!-- end dropdown menu -->
+                <li class="menu-item nav-item"><a href="../category/category.html" class="nav-link">عالمي</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- copyright mobile sidebar menu -->
+        <div class="mobile-copyright mt-5 text-center">
+          <p>حقوق النشر <a href="index.html"> الكلية الجامعية بالخرمة</a> - جميع الحقوق محفوظة</p>
+        </div>
+      </nav>
+    </div>
     <!-- end sidebar mobile menu -->
 
-    <!--Content start-- **************** -->
-
-
-      
-
-
-
-=====================
+    <!--Content start-->
+    <main id="content">
+      <div class="container">
+        <div class="row">
+          <!-- top section -->
 
 
 
 
+          <!--start left column-->
+
+
+          <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+              <!-- block title -->
+              <div class="block-title-8">
+                <h4 class="h4 border-primary">
+                  <span class="bg-primary text-white">عنوان الخبر  get id</span>
+                </h4>
+              </div>
+              <!-- block content -->
 
 
 
+              <div class="border-bottom-last-0 first-pt-0">
+                <!--post start-->
+                main news text    get id
 
 
 
+              </div>
+
+              <!-- end block content -->
+            </div>
+            <!--end block-->
+
+
+            <!--Pagination-->
+
+            <!--end pagination-->
+          </div>
+          <!-- end left column -->
+
+          <!-- start right column -->
+          <aside class="col-md-4 right-sidebar-lg">
+            <!-- sidebar sticky start -->
+            <div class="sticky">
+              <!--widget start-->
+              <aside class="widget">
+                <!-- block title -->
+                 <div class="block-title-6">
+                  <h4 class="h5 border-primary">
+                  <span class="bg-primary text-white">الأكثر قراءة</span>
+                </h4>
+                </div>
+                <!-- block content -->
+                <div class="small-post">
+                  <!--post list-->
+                  {% for post in posts %}
+                  <article class="card card-full hover-a mb-4">
+                    <div class="row">
+
+                      <!--thumbnail-->
+                      <div class="col-3 col-md-4 pr-2 pr-md-0">
+                        <div class="ratio_110-77 image-wrapper">
+                          <a href="#">
+                            <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
+                          </a>
+                        </div>
+                      </div>
+                      <!-- title & date -->
+                      <div class="col-9 col-md-8">
+                        <div class="card-body pt-0">
+                          <h3 class="card-title h6 h5-sm h6-md">
+                            <a href="#">{{post.title}}</a>
+                          </h3>
+                          <div class="card-text small text-muted">
+                            <time datetime="2019-10-16">{{post.created_date}}</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                 {% endfor %}
+                  <!--End post list-->
+                </div>
+                <!--end block content-->
+                <div class="gap-0"></div>
+              </aside>
+              <!--End widget-->
+
+              <!-- widget start -->
+
+
+              <!-- custom post -->
+             <aside class="widget">
+                <div class="block-title-6">
+                <h4 class="h5 border-primary">
+                  <span class="bg-primary text-white"> تكنلوجيا</span>
+                </h4>
+              </div>
+                <!--style 2-->
+                <div class="small-post">
+                  <!--post list-->
+                  {% for post in posts %}
+                  <article class="card card-full hover-a mb-2">
+                    <div class="card-body pt-0">
+                      <!--title-->
+                      <h3 class="card-title h5">
+                        <a href="#"> {{post.title}} ....</a>
+                      </h3>
+                      <!--date-->
+
+                    </div>
+                   <div class="block-title-6">
+                <h6 class="h6-sm border-primary"></h6>
+                </div>
+                  </article>
+                  <!--post list-->
+                {% endfor%}
+                </div>
+
+                <div class="gap-0"></div>
 
 
 
+              </aside>
+                <aside class="widget">
+                <div class="block-title-6">
+                <h4 class="h5 border-primary">
+                  <span class="bg-primary text-white"> صحة</span>
+                </h4>
+              </div>
+                <!--style 2-->
+                <div class="small-post">
+                  <!--post list-->
+                  {% for post in posts %}
+                  <article class="card card-full hover-a mb-2">
+                    <div class="card-body pt-0">
+                      <!--title-->
+                      <h3 class="card-title h5">
+                        <a href="#"> {{post.title}} ....</a>
+                      </h3>
+                      <!--date-->
+
+                    </div>
+                   <div class="block-title-6">
+                <h6 class="h6-sm border-primary"></h6>
+                </div>
+                  </article>
+                  <!--post list-->
+                {% endfor%}
+                </div>
+
+                <div class="gap-0"></div>
 
 
 
+              </aside>
+            </div>
+            <!--end Sidebar sticky-->
+          </aside>
+          <!-- end right column -->
+        </div>
+      </div>
+    </main>
     <!--End Content-->
 
     <!--Footer start-->
-
-
-    
     <footer>
       <!--Footer content-->
       <div id="footer" class="footer-dark bg-dark bg-footer py-5 px-3">
@@ -203,16 +670,15 @@
           <div class="row">
             <!-- left widget -->
             <div class="widget col-md-4">
-              <h3 class="h5 widget-title border-bottom border-smooth">About Us</h3>
+              <h3 class="h5 widget-title border-bottom border-smooth">من نحن</h3>
               <div class="widget-content">
-                <img class="footer-logo img-fluid mb-2" src="../../assets/img/logo/logo-mobile.png" alt="footer logo">
-                <p>قوالب تمهيد المجلات الإخبارية. تم تصميم هذا العرض التوضيحي خصيصًا لعرض استخدام السمة كموقع للمجلة. قم بزيارة صفحتنا الرئيسية لمزيد من العروض التوضيحية.
-</p>
-                <address><i class="fa fa-map-marker-alt"></i> Amphitheatre, Mountain View,<br>
-                  San Francisco, CA 9321, United States
+                <img class="footer-logo img-fluid mb-2" src="{% static 'assets/img/logo/default-logo.png'%}" alt="footer logo">
+                <p>         صحيفة  المشاركات والتعليقات المنشورة بأسماء أصحابها أو بأسماء مستعارة لاتمثل الرأي الرسمي لصحيفة (المواطن) الإلكترونية بل تمثل وجهة نظر كاتبها </p>
+                <address><i class="fa fa-map-marker-alt"></i>مدينة الذهب <br>
+                  المملكة العربية السعودية محافظة الخرمة
                 </address>
-                <p class="footer-info"><i class="fa fa-phone"></i> +(123) 456-7890</p>
-                <p class="footer-info"><i class="fa fa-envelope"></i> support@example.com</p>
+                <p class="footer-info"><i class="fa fa-phone"></i> +(966)5555555555</p>
+                <p class="footer-info"><i class="fa fa-envelope"></i> admin@khitab.online</p>
                 <p></p>
                 <div class="social mb-4">
                   <!--facebook-->
@@ -240,13 +706,14 @@
               <h3 class="h5 widget-title border-bottom border-smooth">منشورات شائعة</h3>
               <div class="posts-list">
                 <!--post list-->
+           {% for post in posts %}
                 <article class="card card-full hover-a mb-4">
                   <div class="row">
                     <!--thumbnail-->
                     <div class="col-3 col-md-4 pr-2 pr-md-0">
                       <div class="ratio_115-80 image-wrapper">
                         <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img6.jpg" alt="Image description">
+                          <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                         </a>
                       </div>
                     </div>
@@ -254,67 +721,17 @@
                     <div class="col-9 col-md-8">
                       <div class="card-body pt-0">
                         <h3 class="card-title h6">
-                          <a href="../post/single1.html">ذهب لماذا أبل في حرب مع الفيسبوك وجوجل هذا الأسبوع
-</a>
+                          <a href="../post/single1.html">{{post.title}}</a>
                         </h3>
                         <div class="card-text small text-muted">
-                          <time datetime="2019-10-16">Oct 16, 2019</time>
+                          <time datetime="2019-10-16">{{post.created_date}}</time>
                         </div>
                       </div>
                     </div>
                   </div>
                 </article>
                 <!--post list-->
-                <article class="card card-full hover-a mb-4">
-                  <div class="row">
-                    <!--thumbnail-->
-                    <div class="col-3 col-md-4 pr-2 pr-md-0">
-                      <div class="ratio_115-80 image-wrapper">
-                        <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img5.jpg" alt="Image description">
-                        </a>
-                      </div>
-                    </div>
-                    <!-- title & date -->
-                    <div class="col-9 col-md-8">
-                      <div class="card-body pt-0">
-                        <h3 class="card-title h6">
-                          <a href="../post/single1.html">كان يأمل في الديمقراطية في تركيا. كانت لدى أردوغان أفكار أخرى
-
-</a>
-                        </h3>
-                        <div class="card-text small text-muted">
-                          <time datetime="2019-10-15">Oct 15, 2019</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <!--post list-->
-                <article class="card card-full hover-a mb-4">
-                  <div class="row">
-                    <!--thumbnail-->
-                    <div class="col-3 col-md-4 pr-2 pr-md-0">
-                      <div class="ratio_115-80 image-wrapper">
-                        <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img4.jpg" alt="Image description">
-                        </a>
-                      </div>
-                    </div>
-                    <!-- title & date -->
-                    <div class="col-9 col-md-8">
-                      <div class="card-body pt-0">
-                        <h3 class="card-title h6">
-                          <a href="../post/single1.html">يتذكر التسبب في نقص أدوية ضغط الدم: ما يمكنك القيام به
-</a>
-                        </h3>
-                        <div class="card-text small text-muted">
-                          <time datetime="2019-10-14">Oct 14, 2019</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                {% endfor %}
                 <!--End post list-->
               </div>
             </div>
@@ -324,13 +741,14 @@
 </h3>
               <div class="posts-list">
                 <!--post list-->
+                {% for post in posts %}
                 <article class="card card-full hover-a mb-4">
                   <div class="row">
                     <!--thumbnail-->
                     <div class="col-3 col-md-4 pr-2 pr-md-0">
                       <div class="ratio_115-80 image-wrapper">
                         <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img3.jpg" alt="Image description">
+                          <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                         </a>
                       </div>
                     </div>
@@ -338,64 +756,17 @@
                     <div class="col-9 col-md-8">
                       <div class="card-body pt-0">
                         <h3 class="card-title h6">
-                          <a href="../post/single1.html">كان الغرب يأمل في الديمقراطية في تركيا. كانت لدى أردوغان أفكار أخرى
-</a>
+                          <a href="../post/single1.html">{{post.title}}</a>
                         </h3>
                         <div class="card-text small text-muted">
-                          <time datetime="2019-10-16">Oct 16, 2019</time>
+                          <time datetime="2019-10-16">{{post.created_date}}</time>
                         </div>
                       </div>
                     </div>
                   </div>
                 </article>
                 <!--post list-->
-                <article class="card card-full hover-a mb-4">
-                  <div class="row">
-                    <!--thumbnail-->
-                    <div class="col-3 col-md-4 pr-2 pr-md-0">
-                      <div class="ratio_115-80 image-wrapper">
-                        <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img2.jpg" alt="Image description">
-                        </a>
-                      </div>
-                    </div>
-                    <!-- title & date -->
-                    <div class="col-9 col-md-8">
-                      <div class="card-body pt-0">
-                        <h3 class="card-title h6">
-                          <a href="../post/single1.html">دايل Earnhardt الابن للعودة إلى مضمار السباق والطموح قديم</a>
-                        </h3>
-                        <div class="card-text small text-muted">
-                          <time datetime="2019-10-15">Oct 15, 2019</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <!--post list-->
-                <article class="card card-full hover-a mb-4">
-                  <div class="row">
-                    <!--thumbnail-->
-                    <div class="col-3 col-md-4 pr-2 pr-md-0">
-                      <div class="ratio_115-80 image-wrapper">
-                        <a href="../post/single1.html">
-                          <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="../../assets/img/115x80/img1.jpg" alt="Image description">
-                        </a>
-                      </div>
-                    </div>
-                    <!-- title & date -->
-                    <div class="col-9 col-md-8">
-                      <div class="card-body pt-0">
-                        <h3 class="card-title h6">
-                          <a href="../post/single1.html">Yankees Party Like It’s 1998, at Least for a Day</a>
-                        </h3>
-                        <div class="card-text small text-muted">
-                          <time datetime="2019-10-14">Oct 14, 2019</time>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                {% endfor %}
                 <!--End post list-->
               </div>
             </div>
@@ -497,9 +868,8 @@
     </div>
   </div>
   <!--END BOOTSTRAP CUSTOMIZER PLUGIN-->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-
-  <!--Bootstrap Customizer js-->
 
 
 
