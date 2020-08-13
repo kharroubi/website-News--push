@@ -18,12 +18,12 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings
+from .views import index, base, post_details
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('NewsApp.urls')),
+    path('', index, name='index'),
+    path('base', base, name='base'),
+    path('post_details/<int:id>', post_details, name='post_details'),
 
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

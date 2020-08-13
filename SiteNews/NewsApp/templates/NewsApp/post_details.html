@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block details-post %}
+          <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+              <!-- block title -->
+              <div class="block-title-8">
+                <h4 class="h4 border-primary">
+                  <span class="bg-primary text-white">{{post_details.title}}</span>
+                </h4>
+              </div>
+
+                <img class="img-fluid lazy loaded" src="{{ post_details.img.url }}"
+                alt="Image description" data-was-processed="true">
+
+                <br><br><br>
+
+
+              <!-- block content -->
+              <div class="border-bottom-last-0 first-pt-0">
+                <!--post start-->
+                  <span class="bg-primary text-white">
+                    {{post_details.text}}
+                  </span>
+              </div>
+
+              <!-- end block content -->
+            </div>
+            <!--end block-->
+
+
+            <!--Pagination-->
+
+            <!--end pagination-->
+          </div>
+          <!-- end left column -->
+         {% endblock details-post %}

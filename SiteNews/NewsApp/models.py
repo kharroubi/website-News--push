@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 
 # Create your models here.
+from django.urls import reverse
 from django.utils import timezone
 
 
@@ -15,6 +16,10 @@ class Post(models.Model):
     published_date = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(auto_now_add=True)
     img = models.ImageField(upload_to='imgPost/', null=True, blank=True)
+
+    def get_absolute_url(self):
+        return reverse('post_details', args=[str(self.id)])
+
 
     def __str__(self):
         return self.title

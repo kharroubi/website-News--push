@@ -4,7 +4,7 @@
 
 <head>
   <!-- Title -->
-  <title>Homepage - BootNews Magazine</title>
+  <title>الصفحة الرئيسية</title>
   <!--Seo meta tags-->
   <meta name="description" content="Bootstrap News Template make your news site project easy, fast loading and look professional">
   <meta name="keywords" content="bootstrap news, bootstrap portal, bootstrap blog, bootstrap magazine">
@@ -93,12 +93,12 @@
       <!-- end top mobile menu -->
 
       <!-- top menu -->
-      <div class="top-menu bg-light-dark">
+     <div class="top-menu bg-secondary">
         <div class="container">
           <!--Navbar-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light   px-0 py-0">
+          <nav class="navbar navbar-expand-lg navbar-dark px-0 py-0 ">
             <!--Hamburger button-->
-            <a id="showLeftPush" class="navbar-toggler side-hamburger border-0 px-0" href="#">
+            <a id="showLeftPush" class="navbar-toggler side-hamburger border-0 px-0" href="#" >
               <span class="hamburger-icon">
                 <span></span><span></span><span></span><span></span>
               </span>
@@ -116,11 +116,12 @@
               <!-- Time -->
 
               <!--Top left menu-->
-              <ul class="navbar-nav">
+              <ul class="nav navbar-nav">
+                 <li class="nav-item"><a class="nav-link active" href="#">الخميس, 13 أغسطس , 2020</a></li>
                 <li class="nav-item"><a class="nav-link active" href="#">الصفحة الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="../pages/about-us.html"> عن الصحيفة</a></li>
                 <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html">تواصل معنا</a></li>
-                <li class="nav-item"><a class="nav-link" href="#" target="_blank">خريطة الموقع</a></li>
+
               </ul>
               <!--end top left menu-->
               <!--Top right menu-->
@@ -511,9 +512,9 @@
             <div class="row py-2">
               <!--Breaking box-->
               <div class="col-2 col-sm-1 col-md-3 col-lg-2 py-1 pr-md-0 mb-md-1">
-                <div class="d-inline-block d-md-block bg-primary text-white text-center breaking-caret py-1 px-2">
+                <div class="d-inline-block d-md-block bg-blue text-white text-center breaking-caret py-1 px-2">
                   <span class="fas fa-bolt mr-1" title="Breaking News"></span>
-                  <span class="d-none d-md-inline-block">عاجل اليوم</span>
+                  <span class="d-none d-md-inline-block"> أخبار عاجلة</span>
                 </div>
               </div>
               <!--Breaking content-->
@@ -578,12 +579,12 @@
                       <div class="ratio image-wrapper">
 
 
-                          <a href="#">
+                          <a href="{{ post.get_absolute_url }}">
                           <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src= "{{post.img.url}}" alt="Image description">
                         </a>
                         <div class="position-absolute text-center pb-5 p-3 b-0 w-100 bg-lg-shadow">
                           <!--title-->
-                          <a href="#">
+                          <a href="{{ post.get_absolute_url }}">
                             <h2 class="h1-sm h2-md display-4-lg font-weight-500 text-white">{{post.title}}</h2>
                           </a>
                           <!-- meta title -->
@@ -634,7 +635,7 @@
               <!-- block title -->
               <div class="block-title-6">
                 <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white">أخر الأخبار</span>
+                  <span class="bg-blue text-white">أخر الأخبار</span>
                 </h4>
               </div>
               <!-- block content -->
@@ -643,13 +644,13 @@
 
               <div class="border-bottom-last-0 first-pt-0">
                 <!--post start-->
-                {% for post in posts %}
+                {% for post in lastposts %}
                 <article class="card card-full hover-a py-4">
                   <div class="row">
                     <div class="col-sm-6 col-md-12 col-lg-6">
                       <!--thumbnail-->
                       <div class="ratio_360-202 image-wrapper">
-                        <a href="#">
+                        <a href="{{ post.get_absolute_url }}">
                           <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                         </a>
                       </div>
@@ -659,7 +660,7 @@
 
                         <!--title-->
                         <h3 class="card-title h2 h3-sm h2-md">
-                          <a href="#"> {{post.title}}</a>
+                          <a href="{{ post.get_absolute_url }}"> {{post.title}}</a>
                         </h3>
                         <!--author and date-->
                         <div class="card-text mb-2 text-muted small">
@@ -715,15 +716,45 @@
           <!-- end left column -->
 
           <!-- start right column -->
+
+
+
+
           <aside class="col-md-4 right-sidebar-lg">
             <!-- sidebar sticky start -->
             <div class="sticky">
+
+                <!--Social network 2-->
+              <aside class="widget">
+                <!-- widget title -->
+                 <!-- block title -->
+                 <div class="block-title-6">
+                  <h4 class="h5 border-primary">
+                  <span class="bg-blue text-white"> شبكات اجتماعية</span>
+                </h4>
+                </div>
+                <!-- widget content -->
+                <ul class="list-unstyled social-two">
+                  <li class="facebook"><a class="bg-facebook text-white" href="#" target="_blank" title="facebook">فيسبوك</a></li>
+                  <li class="twitter"><a class="bg-twitter text-white" href="#" target="_blank" title="twitter">تويتر </a></li>
+                  <li class="instagram"><a class="bg-instagram text-white" href="#" target="_blank" title="instagram">انستقرام </a></li>
+                  <li class="youtube"><a class="bg-youtube text-white" href="#" target="_blank" title="youtube">يوتيوب </a></li>
+                  <li class="linkedin"><a class="bg-linkedin text-white" href="#" target="_blank" title="linkedin">Linkedin</a></li>
+                  <li class="vimeo"><a class="bg-vimeo text-white" href="#" target="_blank" title="Vimeo">Vimeo</a></li>
+                  <li class="pinterest"><a class="bg-pinterest text-white" href="#" target="_blank" title="Pinterest">Pinterest</a></li>
+                  <li class="telegram"><a class="bg-telegram text-white" href="#" target="_blank" title="Telegram">تليجرام</a></li>
+                </ul>
+                <!-- end widget content -->
+                <div class="gap-15"></div>
+              </aside>
+
+
               <!--widget start-->
               <aside class="widget">
                 <!-- block title -->
                  <div class="block-title-6">
                   <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white">الأكثر قراءة</span>
+                  <span class="bg-blue text-white">الأكثر قراءة</span>
                 </h4>
                 </div>
                 <!-- block content -->
@@ -736,7 +767,7 @@
                       <!--thumbnail-->
                       <div class="col-3 col-md-4 pr-2 pr-md-0">
                         <div class="ratio_110-77 image-wrapper">
-                          <a href="#">
+                          <a href="{{ post.get_absolute_url }}">
                             <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                           </a>
                         </div>
@@ -745,7 +776,7 @@
                       <div class="col-9 col-md-8">
                         <div class="card-body pt-0">
                           <h3 class="card-title h6 h5-sm h6-md">
-                            <a href="#">{{post.title}}</a>
+                            <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
                           </h3>
                           <div class="card-text small text-muted">
                             <time datetime="2019-10-16">{{post.created_date}}</time>
@@ -777,7 +808,7 @@
               <aside class="widget">
                 <div class="block-title-6">
                 <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white"> تكنلوجيا</span>
+                  <span class="bg-blue text-white"> تكنلوجيا</span>
                 </h4>
               </div>
                 <!--style 2-->
@@ -790,12 +821,12 @@
                       <h3 class="card-title h5">
                         <a href="#"> {{post.title}} ....</a>
                       </h3>
+
+                       {{post.created_date}}
                       <!--date-->
 
                     </div>
-                   <div class="block-title-6">
-                <h6 class="h6-sm border-primary"></h6>
-                </div>
+
                   </article>
                   <!--post list-->
                 {% endfor%}
@@ -809,7 +840,7 @@
                 <aside class="widget">
                 <div class="block-title-6">
                 <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white"> صحة</span>
+                  <span class="bg-blue text-white"> صحة</span>
                 </h4>
               </div>
                 <!--style 2-->
@@ -822,12 +853,12 @@
                       <h3 class="card-title h5">
                         <a href="#"> {{post.title}} ....</a>
                       </h3>
+
+                       {{post.created_date}}
                       <!--date-->
 
                     </div>
-                   <div class="block-title-6">
-                <h6 class="h6-sm border-primary"></h6>
-                </div>
+
                   </article>
                   <!--post list-->
                 {% endfor%}
@@ -857,7 +888,7 @@
             <div class="widget col-md-4">
               <h3 class="h5 widget-title border-bottom border-smooth">من نحن</h3>
               <div class="widget-content">
-                <img class="footer-logo img-fluid mb-2" src="{%static 'assets/img/logo/logo-mobile.png' %}" alt="footer logo">
+                <img class="footer-logo img-fluid mb-2" src="{%static 'assets/img/logo/default-logo.png' %}" alt="footer logo">
                <p>         صحيفة  المشاركات والتعليقات المنشورة بأسماء أصحابها أو بأسماء مستعارة لاتمثل الرأي الرسمي لصحيفة (المواطن) الإلكترونية بل تمثل وجهة نظر كاتبها </p>
 
                 <address><i class="fa fa-map-marker-alt"></i>مدينة الذهب <br>
