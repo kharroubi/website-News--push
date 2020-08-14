@@ -3,29 +3,30 @@
 
 
 {% block details-post %}
+
+<!-- block content -->
           <div class="col-md-8">
             <!-- block start -->
             <div class="block-area">
               <!-- block title -->
-              <div class="block-title-8">
-                <h4 class="h4 border-primary">
-                  <span class="bg-primary text-white">{{post_details.title}}</span>
-                </h4>
+              <br>
+              <div class="block-title-8" align="center">
+                <h1>
+                  <span class=" text-black   ">{{post_details.title}}</span>
+                </h1>
               </div>
 
                 <img class="img-fluid lazy loaded" src="{{ post_details.img.url }}"
                 alt="Image description" data-was-processed="true">
-
                 <br><br><br>
+                <h3 class="card-text">
+                <a class="">  {{post_details.text}} </a>
+                </h3>
+                <ul class="pagination">
 
+                  <li class="page-item" ><a class="page-link" href="/#index">المزيد من أخر الاخبار</a></li>
+                </ul>
 
-              <!-- block content -->
-              <div class="border-bottom-last-0 first-pt-0">
-                <!--post start-->
-                  <span class="bg-primary text-white">
-                    {{post_details.text}}
-                  </span>
-              </div>
 
               <!-- end block content -->
             </div>

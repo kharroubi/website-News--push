@@ -12,13 +12,16 @@ from django.shortcuts import render
 
 def index(request):
     posts = Post.objects.filter(category__id="2").order_by('-id')[:3]
-    lastposts = Post.objects.filter(category__id="1").order_by('-id')[:6]
-    urgentposts = Post.objects.filter(category__id="3").order_by('-id')[:4]
-    moreReadposts = Post.objects.filter(category__id="3").order_by('-id')[:4]
+    lastposts = Post.objects.filter(category__id="3").order_by('-id')[:6]
+    urgentposts = Post.objects.filter(category__id="7").order_by('-id')[:4]
+    moreReadposts = Post.objects.filter(category__id="4").order_by('-id')[:4]
+    healthposts = Post.objects.filter(category__id="5").order_by('-id')[:4]
+    Technologyposts= Post.objects.filter(category__id="6").order_by('-id')[:4]
     context = {'posts': posts,
                'lastposts': lastposts,
                'urgentposts':urgentposts,
                'moreReadposts': moreReadposts,
+               'healthposts': healthposts,
                'date': datetime.now(),
              }
     return render(request,"index.html",context)
@@ -27,14 +30,18 @@ def index(request):
 def post_details(request, id):
     post_details = get_object_or_404(Post, id=id)
     posts = Post.objects.filter(category__id="2").order_by('-id')[:3]
-    lastposts = Post.objects.filter(category__id="1").order_by('-id')[:6]
-    urgentposts = Post.objects.filter(category__id="3").order_by('-id')[:4]
-    moreReadposts = Post.objects.filter(category__id="3").order_by('-id')[:4]
+    lastposts = Post.objects.filter(category__id="3").order_by('-id')[:6]
+    urgentposts = Post.objects.filter(category__id="7").order_by('-id')[:4]
+    moreReadposts = Post.objects.filter(category__id="4").order_by('-id')[:4]
+    healthposts = Post.objects.filter(category__id="5").order_by('-id')[:4]
+    Technologyposts = Post.objects.filter(category__id="6").order_by('-id')[:4]
     context ={'post_details': post_details ,
               'lastposts': lastposts,
               'urgentposts': urgentposts,
+              'healthposts': healthposts,
               'moreReadposts': moreReadposts,
-              'posts': posts
+              'posts': posts,
+              'date': datetime.now()
               }
     return render(request, 'NewsApp/post_details.html', context)
 
