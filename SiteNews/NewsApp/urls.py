@@ -25,5 +25,7 @@ urlpatterns = [
     path('base', base, name='base'),
     path('post_details/<int:id>', post_details, name='post_details'),
 
+
+
 ]
 

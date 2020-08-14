@@ -6,6 +6,10 @@ from django.shortcuts import get_object_or_404
 
 #.filter(category__id=2)
 
+from datetime import datetime
+from django.shortcuts import render
+
+
 def index(request):
     posts = Post.objects.filter(category__id="2").order_by('-id')[:3]
     lastposts = Post.objects.filter(category__id="1").order_by('-id')[:6]
@@ -15,6 +19,7 @@ def index(request):
                'lastposts': lastposts,
                'urgentposts':urgentposts,
                'moreReadposts': moreReadposts,
+               'date': datetime.now(),
              }
     return render(request,"index.html",context)
 
@@ -40,7 +45,9 @@ def single6(request):
 
 def base(request):
     posts = Post.objects.all().order_by('-id')[:3]
-    context = {'posts': posts}
+    context = {'posts': posts,
+               'date': datetime.now()
+               }
     return render(request, "base.html", context)
 
 
