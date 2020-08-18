@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block urgentposts %}
+{% endblock urgentposts %}
 
-{% block details-post %}
+{% block carousel %}
+{% endblock carousel %}
 
+{% block lastNews %}
 <!-- block content -->
-          <div class="col-md-8">
+          <div  align="center" >
+             <div class="col-md-8">
             <!-- block start -->
             <div class="block-area">
               <!-- block title -->
@@ -18,24 +23,49 @@
 
                 <img class="img-fluid lazy loaded" src="{{ post_details.img.url }}"
                 alt="Image description" data-was-processed="true">
-                <br><br><br>
-                <h3 class="card-text">
-                <a class="">  {{post_details.text}} </a>
-                </h3>
-                <ul class="pagination">
+            </div>
+          </div>
+          <div  align="center" >
+            <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
 
-                  <li class="page-item" ><a class="page-link" href="/#index">المزيد من أخر الاخبار</a></li>
+                <p align="right" style = "font-size:22px" >
+                <a class="">  &nbsp;&nbsp; &nbsp;&nbsp; {{post_details.text}} </a>
+
+
+
+                </p>
+
+
+                <ul>
+
+                  <li><aclass="page-link" href="">
+
+                    </a>عدد المشاهدات {{post_details.nb_views}}
+                  </li>
+                  <li><a >
+                    الكاتب: {{ post_details.author.name }} </a>
+                  </li>
+                  <li class="page-item" ><a class="page-link" href="{% url 'index' %}">المزيد من أخر الاخبار على الموقع الرسمي</a></li>
                 </ul>
 
 
               <!-- end block content -->
-            </div>
+
             <!--end block-->
 
 
             <!--Pagination-->
 
             <!--end pagination-->
-          </div>
+
           <!-- end left column -->
-         {% endblock details-post %}
+            </div></div></div></div>
+{% endblock lastNews %}
+{% block leftblock %}
+{% endblock leftblock %}
+
+
+
+

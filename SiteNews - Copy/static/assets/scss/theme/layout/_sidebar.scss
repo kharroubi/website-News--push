@@ -1,0 +1,61 @@
+/*------------------------------------
+  Sidebar
+------------------------------------*/
+.right-sidebar{
+	padding-left: $sidebar-padding-left;
+}
+.left-sidebar {
+	padding-right: $sidebar-padding-right;
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.right-sidebar#{$infix} {
+			padding-left: $sidebar-padding-left;
+		}
+		.left-sidebar#{$infix} {
+			padding-right: $sidebar-padding-right;
+		}
+	}
+}
+
+// Sidelink color
+.side-link, .sidebar-link {
+	li {
+		a {
+			color: $color_fonts;
+			&.caret-collapse{
+				color: $primary;
+			}
+			&.caret-collapse.collapsed{
+				color: $color_fonts;
+				&:hover{
+					color: $primary;
+				}
+			}
+			&:hover, &.active{
+				background-color: transparent;
+				color: $primary;
+			}
+		}
+		ul {
+			li{
+				a {
+					color: $color_fonts;
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+}
+.sidebar-link {
+	li {
+		a {
+			display: block;
+			font-size: $sidebar-link-font-size;
+			padding: $sidebar-link-padding;
+		}
+	}
+}

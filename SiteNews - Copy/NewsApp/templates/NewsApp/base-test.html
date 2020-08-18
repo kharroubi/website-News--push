@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block details-post %}
+<!-- Big grid 10 -->
+
+   <div class="row featured-10 mb-5">
+              <!--Start box news-->
+              <div class="col-md-6 pt-05 pb-05 pr-md-05">
+                <div class="row newsbox-left">
+                  <!--news box-->
+
+             {% for post in posts %}
+                  <article class="col-6">
+                    <div class="card card-full text-white overflow zoom">
+                      <div class="ratio image-wrapper">
+                        <!-- thumbnail -->
+                        <a href="#">
+                          <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src= "{{post.img.url}}" alt="Image description">
+                       </a>
+                        <!-- category & title -->
+                        <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100 bg-shadow">
+                          <a class="p-1 badge badge-primary" href="#">Automotive</a>
+                          <a href="#">
+                            <h3 class="h3 h2-sm h5-md h3-lg text-white my-1">{{post.title}}</h3>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+
+                     {% endfor %}
+                  <!--news box-->
+
+                  <!--end news box-->
+                </div>
+              </div>
+              <!--End box news-->
+              <!--Start box news-->
+              <div class="col-md-6 pt-05 pb-05 pl-md-05">
+                <div class="row newsbox-right">
+                  <!-- news box -->
+                     {% for post in lastposts %}
+                  <article class="col-6">
+                    <div class="card card-full text-white overflow zoom">
+                      <div class="ratio image-wrapper">
+                        <!-- thumbnail -->
+                        <a href="#">
+                         <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src= "{{post.img.url}}" alt="Image description">
+                       </a>
+                        <!-- category & title -->
+                        <div class="position-absolute px-3 pb-3 pt-0 b-0 w-100 bg-shadow">
+                          <a class="p-1 badge badge-primary" href="#">Holiday</a>
+                          <a href="#">
+                            <h3 class="h5 h3-sm h5-md text-white my-1">{{post.text|truncatewords:21}}</h3>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                    {% endfor %}
+                  <!--news box-->
+
+                  <!--end news box-->
+                </div>
+              </div>
+              <!--End box news-->
+            </div>
+            <!--End Big grid 10-->
+          </div>
+
+         {% endblock details-post %}

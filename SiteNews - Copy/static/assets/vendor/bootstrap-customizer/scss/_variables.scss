@@ -1,0 +1,68 @@
+// =======================================================
+// Customizer Variable
+// =======================================================
+
+$blue:    #2196f3 !default;
+$purple:  #7952B3 !default;
+$pink:    #e83e8c !default;
+$red:     #d72924 !default;
+$orange:  #fa983a !default;
+$yellow:  #f4b12c !default;
+$green:   #00b191 !default;
+$black:    #000000 !default;
+$darkblue:  #07478f !default;
+$lightblue:  #1db8fa !default;
+$blacksoft:  #131313 !default;
+
+$white: #ffffff !default;
+$light:  #f6f6f6 !default;
+$dark: #1b1b1b !default;
+$dark-border: #424242 !default;
+$border-color: #dee2e6 !default;
+$font-color: #161616 !default;
+$font-heading: #212121 !default;
+$color-menu: #212529 !default;
+$footer-color: #dfdfdf !default;
+
+$boxed-framed-bg:                           $white !default;
+$boxed-wrapper-bg:                          $white !default;
+$boxed-framed-box-shadow: 0 0 3px $border-color !default;
+$framed-main-bg:                            rgba($white, .7) !default;
+$framed-main-dark-bg:                       rgba($black, .7) !default;
+$boxed-main-dark-bg :                       $dark;
+$boxed-framed-mobile-width:                 100% !default;
+$boxed-framed-tabs-width:                   90% !default;
+$boxed-framed-desktop-width:                1200px !default;
+$boxed-framed-desktop-padding:             .5rem 0rem !default;
+
+// background images
+$bg-cover-color:                            $white !default;
+$bg-cover-1:                                url(../img/background/bg1.jpg) !default;
+$bg-cover-2:                                url(../img/background/bg2.jpg) !default;
+$bg-cover-3:                                url(../img/background/bg3.jpg) !default;
+
+$bg-repeat-1:                               url(../img/background/pattern1.png) !default;
+$bg-repeat-2:                               url(../img/background/pattern2.png) !default;
+$bg-repeat-3:                               url(../img/background/pattern3.png) !default;
+
+$bg-pattern-repeat:                         url(../img/background/pattern4.png) !default;
+$bg-pattern-repeat-dark:                    url(../img/background/pattern5.png) !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "black":      $black,
+    "darkblue":   $darkblue,
+    "lightblue":  $lightblue,
+    "blacksoft":  $blacksoft
+  ),
+  $colors
+);

@@ -1,0 +1,25 @@
+/*------------------------------------
+	Vertical slider
+------------------------------------*/
+.top-indicator {
+	left: 0;
+	top: $indicator-top;
+	bottom: inherit;
+	right: inherit;
+	justify-content: left;
+	margin-left: $indicator-right;
+}
+.slider-caption {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	color: $slider-caption-color;
+	background-color: $slider-caption-bg;
+	text-align: right;
+	font-size: $slider-caption-font;
+	padding: $slider-caption-padding;
+	border-bottom-right-radius: $slider-caption-radius;
+	border-bottom-left-radius: $slider-caption-radius;
+}

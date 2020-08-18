@@ -1,11 +1,32 @@
 {% load static %}
 {% include "javascript.html" %}
+<style type="text/css">
+
+
+body {
+  direction: rtl;
+    background: #4fde15;
+}
+nav {
+
+}
+p{
+  color: #0e0e0e;
+  font-family: "Droid Serif";
+}
+
+
+
+</style>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <!-- Title -->
-  <title>Homepage - BootNews Magazine</title>
+  <title>الصفحة الرئيسية</title>
   <!--Seo meta tags-->
   <meta name="description" content="Bootstrap News Template make your news site project easy, fast loading and look professional">
   <meta name="keywords" content="bootstrap news, bootstrap portal, bootstrap blog, bootstrap magazine">
@@ -46,8 +67,6 @@
       <span class="skiplink-text">Skip to main content</span>
     </div>
   </a>
-
-
   <!--Background image-->
   <div class="bg-image"></div>
   <!-- ========== WRAPPER ========== -->
@@ -62,8 +81,8 @@
             <div id="navbar-mobile" class="collapse navbar-collapse nav-top-mobile">
               <!--Top left menu-->
               <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link"    href="../pages/about-us.html">من نحن</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html"> توصل معنا</a></li>
+                <li class="nav-item"><a class="nav-link"    href="#">من نحن</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"> توصل معنا</a></li>
               </ul>
               <!--Top right menu-->
               <ul class="navbar-nav ml-auto text-center">
@@ -85,18 +104,18 @@
       <!-- end top mobile menu -->
 
       <!-- top menu -->
-      <div class="top-menu bg-light-dark">
+     <div class="top-menu bg-secondary">
         <div class="container">
           <!--Navbar-->
-          <nav class="navbar navbar-expand-lg navbar-light bg-light   px-0 py-0">
+          <nav class="navbar navbar-expand-lg navbar-dark px-0 py-0 ">
             <!--Hamburger button-->
-            <a id="showLeftPush" class="navbar-toggler side-hamburger border-0 px-0" href="#">
+            <a id="showLeftPush" class="navbar-toggler side-hamburger border-0 px-0" href="#" >
               <span class="hamburger-icon">
                 <span></span><span></span><span></span><span></span>
               </span>
             </a>
             <!-- Mobile logo -->
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <img class="mobile-logo img-fluid d-lg-none mx-auto" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
             </a>
             <!--Right Toggle Button-->
@@ -104,15 +123,19 @@
               <span class="fa fa-search"></span>
             </button>
             <!--Top Navbar-->
+
+
             <div id="navbarTogglerDemo" class="collapse navbar-collapse">
               <!-- Time -->
 
               <!--Top left menu-->
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" href="#">   {{ date|date:"D d M Y" }} </a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">الصفحة الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">من نحن</a></li>
-                <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html">تواصل معنا</a></li>
+
+              <ul class="nav navbar-nav">
+
+                <li class="nav-item"><a class="nav-link active" href="{% url 'index' %}">   {{ date|date:"D d M Y" }} </a></li>
+                <li class="nav-item"><a class="nav-link active" href="{% url 'index' %}">الصفحة الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"> عن الصحيفة</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">تواصل معنا</a></li>
 
               </ul>
               <!--end top left menu-->
@@ -139,7 +162,7 @@
             <!--Left content logo-->
             <div class="col-lg-4">
               <div id="main-logo" class="main-logo my-2 my-lg-4 d-none d-lg-block">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{% url 'index' %}">
                   <img class="img-fluid" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
                 </a>
               </div>
@@ -179,7 +202,7 @@
           <div id="navbarTogglerDemo1" class="collapse navbar-collapse hover-mode">
             <!-- logo in navbar -->
             <div class="logo-showbacktop">
-              <a href="index.html">
+              <a href="{% url 'index' %}">
                 <img class="img-fluid" src="{% static 'assets/img/logo/default-logo.png'%}" alt="Logo site">
               </a>
             </div>
@@ -426,7 +449,7 @@
         <div class="mobile-content mb-auto">
           <!--logo-->
           <div class="logo-sidenav p-2">
-            <a href="index.html">
+            <a href="{% url 'index' %}">
               <img src="{% static 'assets/img/logo/default-logo.png'%}" class="img-fluid" alt="logo">
             </a>
           </div>
@@ -437,16 +460,16 @@
                 <li class="menu-item nav-item"><a href="#" class="nav-link active">الصفحة الرئيسية</a></li>
                 <!-- dropdown menu start -->
                 <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-11">اعمال</a>
+                  <a href="#basetest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-11">اعمال</a>
                   <!-- dropdown content -->
                   <ul class="dropdown-menu" aria-labelledby="menu-11" role="menu">
                     <li class="menu-item nav-item">
-                      <a href="../category/category.html" class="dropdown-item">تجارة</a>
+                      <a href="#basetest" class="dropdown-item">تجارة</a>
                     </li>
                   </ul>
                 </li>
                 <!-- end dropdown menu -->
-                <li class="menu-item nav-item"><a href="../category/category.html" class="nav-link">اقتصاد</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'index' %}" class="nav-link">اقتصاد</a></li>
                 <!-- dropdown menu start -->
                 <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
                   <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-12">نمط حيات</a>
@@ -495,24 +518,136 @@
     <!-- end sidebar mobile menu -->
 
     <!--Content start-->
+
     <main id="content">
       <div class="container">
         <div class="row">
           <!-- top section -->
+          <div class="col-12 mt-05">
+            <!--Slider ticker-->
+            <div class="row py-2">
+              <!--Breaking box-->
+               {% block urgentposts %}
+              <div class="col-2 col-sm-1 col-md-3 col-lg-2 py-1 pr-md-0 mb-md-1">
+                <div class="d-inline-block d-md-block bg-blue text-white text-center breaking-caret py-1 px-2">
+                  <span class="fas fa-bolt mr-1" title="Breaking News"></span>
+                  <span class="d-none d-md-inline-block"> أخبار عاجلة</span>
+                </div>
+              </div>
+
+              <!--Breaking content-->
+              <div class="col-10 col-sm-11 col-md-9 col-lg-10 pl-1 pl-md-2">
+                <div class="breaking-box">
+                  <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
+
+                    <!--breaking news-->
+                    <div class="carousel-inner">
+                      <!--list post-->
+
+                      <div class="carousel-item active aribudin">
+                         <a class="h4 font-weight-light" href="#">عاجل | الدفاع الروسية: اعتراض طائرة استطلاع أميركية فوق البحر الأسود</a>
+                      </div>
+                      <!--list post-->
+                      <div class="carousel-item aribudin">
+                        <a class="h4 font-weight-light" href="#">وسائل إعلام لبنانية: وزير الداخلية يتجه للاستقالة من الحكومة غدا #عاجل</a>
+                      </div>
+                      <!--list post-->
+
+                    </div>
+
+                    <!--end breaking news-->
+                    <!--navigation slider-->
+                    <div class="navigation-box p-2 d-none d-sm-block">
+                      <!--nav left-->
+                      <a class="carousel-control-prev text-primary" href="#carouselbreaking" role="button" data-slide="prev">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <!--nav right-->
+                      <a class="carousel-control-next text-primary" href="#carouselbreaking" role="button" data-slide="next">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div><!--end navigation slider-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endblock urgentposts %}
+            <!--End slider ticker-->
+{% block carousel %}
+            <!-- Single Slider -->
+            <class="col-12"><div class="row featured-one mb-5">
+              <!--Start left cover-->
 
 
+              <div class="col-12">
+                <div id="owl-carousel11" class="owl-carousel owl-theme owl-mx-0">
+                  <!--Item slider-->
+
+                  {% for post in posts %}
+
+                  <article class="item">
+
+                    <div class="card card-full text-light">
+                      <!--thumbnail-->
+                      <div class="ratio image-wrapper">
 
 
+                          <a href="{{ post.get_absolute_url }}">
+                          <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src= "{{post.img.url}}" alt="Image description">
+                        </a>
+                        <div class="position-absolute text-center pb-5 p-3 b-0 w-100 bg-lg-shadow">
+                          <!--title-->
+                          <a href="{{ post.get_absolute_url }}">
+                            <h2 class="h1-sm h2-md display-4-lg font-weight-500 text-white">{{post.title}}</h2>
+                          </a>
+                          <!-- meta title -->
+                          <div class="news-meta">
+                            <span class="news-author">بواسطة <a class="text-white font-weight-bold" href="#">{{ post.author }} </a></span>
+                            <time class="news-date" datetime="2019-10-22">{{post.created_date}}</time>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+      </div>
+                  </article>
+
+                  {% endfor %}
+                  <!--Item slider-->
+
+                </div>
+              </div>
+              <!--End left cover-->
+
+
+            </div></class><!--End Single Slider-->
+{% endblock carousel %}
+
+          </div>
           <!--start left column-->
 
-          {% block details-post %}
+{% block lastNews %}
           <div class="col-md-8">
             <!-- block start -->
             <div class="block-area">
               <!-- block title -->
-              <div class="block-title-8">
-                <h4 class="h4 border-primary">
-                  <span class="bg-primary text-white">عنوان الخبر  get id</span>
+              <div class="block-title-6">
+                <h4 class="h5 border-primary">
+                  <span class="bg-blue text-white">أخر الأخبار</span>
                 </h4>
               </div>
               <!-- block content -->
@@ -521,33 +656,104 @@
 
               <div class="border-bottom-last-0 first-pt-0">
                 <!--post start-->
-                main news text    get id
+                {% for post in lastposts %}
+                <article class="card card-full hover-a py-4">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                      <!--thumbnail-->
+                      <div class="ratio_360-202 image-wrapper">
+                        <a href="{{ post.get_absolute_url }}">
+                          <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                  <div class="card-body pt-3 pt-sm-0 pt-md-3 pt-lg-0">
 
+                        <!--title-->
+                        <h4 class="card-title h4 h4-sm h4-sm">
+                          <a href="{{ post.get_absolute_url }}"> {{post.title}}</a>
+                        </h4>
+                        <!--author and date-->
+                        <div class="card-text mb-2 text-muted small">
+                          <span class="d-none d-sm-inline mr-1">
+                            <a class="font-weight-bold" href=""> بواسطة: {{post.author}} </a>
 
+                            <i class="fa fa-eye" aria-hidden="true">  المشاهدات: {{post.nb_views}}</i>
 
+                          </span>
+                         </div>
+                        <!--description-->
+                        <h3 class="card-text">{{post.text|truncatewords:25}} </h3>
+                        <!-- read more button -->
+                        <a class="btn btn-outline-primary" href="{{ post.get_absolute_url }}">المزيد</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                 {% endfor %}
               </div>
 
               <!-- end block content -->
             </div>
             <!--end block-->
 
-
             <!--Pagination-->
+            <div class="clearfix my-4">
+              <nav class="float-left" aria-label="Page navigation example">
+                <!--page number-->
+                <ul class="pagination">
 
+                  <li class="page-item" ><a class="page-link" href="{% url 'index' %}">المزيد من أخر الاخبار</a></li>
+                </ul>
+                <!--end page number-->
+              </nav>
+
+            </div>
             <!--end pagination-->
           </div>
           <!-- end left column -->
-         {% endblock details-post %}
+
           <!-- start right column -->
-          <aside class="col-md-4 right-sidebar-lg">
+{% endblock lastNews %}
+
+
+          {% block leftblock %}
+   <aside class="col-md-4 right-sidebar-lg">
             <!-- sidebar sticky start -->
             <div class="sticky">
+
+                <!--Social network 2-->
+              <aside class="widget">
+                <!-- widget title -->
+                 <!-- block title -->
+                 <div class="block-title-6">
+                  <h4 class="h5 border-primary">
+                  <span class="bg-blue text-white"> شبكات اجتماعية</span>
+                </h4>
+                </div>
+                <!-- widget content -->
+                <ul class="list-unstyled social-two">
+                  <li class="facebook"><a class="bg-facebook text-white" href="#" target="_blank" title="facebook">فيسبوك</a></li>
+                  <li class="twitter"><a class="bg-twitter text-white" href="#" target="_blank" title="twitter">تويتر </a></li>
+                  <li class="instagram"><a class="bg-instagram text-white" href="#" target="_blank" title="instagram">انستقرام </a></li>
+                  <li class="youtube"><a class="bg-youtube text-white" href="#" target="_blank" title="youtube">يوتيوب </a></li>
+                  <li class="linkedin"><a class="bg-linkedin text-white" href="#" target="_blank" title="linkedin">Linkedin</a></li>
+                  <li class="vimeo"><a class="bg-vimeo text-white" href="#" target="_blank" title="Vimeo">Vimeo</a></li>
+                  <li class="pinterest"><a class="bg-pinterest text-white" href="#" target="_blank" title="Pinterest">Pinterest</a></li>
+                  <li class="telegram"><a class="bg-telegram text-white" href="#" target="_blank" title="Telegram">تليجرام</a></li>
+                </ul>
+                <!-- end widget content -->
+                <div class="gap-15"></div>
+              </aside>
+
+
               <!--widget start-->
               <aside class="widget">
                 <!-- block title -->
                  <div class="block-title-6">
                   <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white">الأكثر قراءة</span>
+                  <span class="bg-blue text-white">الأكثر قراءة</span>
                 </h4>
                 </div>
                 <!-- block content -->
@@ -560,7 +766,7 @@
                       <!--thumbnail-->
                       <div class="col-3 col-md-4 pr-2 pr-md-0">
                         <div class="ratio_110-77 image-wrapper">
-                          <a href="#">
+                          <a href="{{ post.get_absolute_url }}">
                             <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                           </a>
                         </div>
@@ -569,7 +775,7 @@
                       <div class="col-9 col-md-8">
                         <div class="card-body pt-0">
                           <h3 class="card-title h6 h5-sm h6-md">
-                            <a href="#">{{post.title}}</a>
+                            <a href="{{ post.get_absolute_url }}">{{post.title}}</a>
                           </h3>
                           <div class="card-text small text-muted">
                             <time datetime="2019-10-16">{{post.created_date}}</time>
@@ -587,13 +793,21 @@
               <!--End widget-->
 
               <!-- widget start -->
+              <aside class="widget">
+                <!-- widget content -->
+                <div class="p-4 border bg-light-dark text-center mb-4">
+                  <!--title-->
 
+                </div>
+                <!-- end widget content -->
+                <div class="gap-0"></div>
+              </aside>
 
               <!-- custom post -->
-             <aside class="widget">
+              <aside class="widget">
                 <div class="block-title-6">
                 <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white"> تكنلوجيا</span>
+                  <span class="bg-blue text-white"> تكنلوجيا</span>
                 </h4>
               </div>
                 <!--style 2-->
@@ -604,14 +818,14 @@
                     <div class="card-body pt-0">
                       <!--title-->
                       <h3 class="card-title h5">
-                        <a href="#"> {{post.title}} ....</a>
+                        <a href="{{ post.get_absolute_url }}"> {{post.title}} ....</a>
                       </h3>
+
+                       {{post.created_date}}
                       <!--date-->
 
                     </div>
-                   <div class="block-title-6">
-                <h6 class="h6-sm border-primary"></h6>
-                </div>
+
                   </article>
                   <!--post list-->
                 {% endfor%}
@@ -625,7 +839,7 @@
                 <aside class="widget">
                 <div class="block-title-6">
                 <h4 class="h5 border-primary">
-                  <span class="bg-primary text-white"> صحة</span>
+                  <span class="bg-blue text-white"> صحة</span>
                 </h4>
               </div>
                 <!--style 2-->
@@ -636,14 +850,14 @@
                     <div class="card-body pt-0">
                       <!--title-->
                       <h3 class="card-title h5">
-                        <a href="#"> {{post.title}} ....</a>
+                        <a href="{{ post.get_absolute_url }}"> {{post.title}} ....</a>
                       </h3>
+
+                       {{post.created_date}}
                       <!--date-->
 
                     </div>
-                   <div class="block-title-6">
-                <h6 class="h6-sm border-primary"></h6>
-                </div>
+
                   </article>
                   <!--post list-->
                 {% endfor%}
@@ -657,13 +871,17 @@
             </div>
             <!--end Sidebar sticky-->
           </aside>
+
+       {% endblock leftblock %}
           <!-- end right column -->
         </div>
       </div>
     </main>
+
     <!--End Content-->
 
     <!--Footer start-->
+    {% block Footer %}
     <footer>
       <!--Footer content-->
       <div id="footer" class="footer-dark bg-dark bg-footer py-5 px-3">
@@ -673,8 +891,9 @@
             <div class="widget col-md-4">
               <h3 class="h5 widget-title border-bottom border-smooth">من نحن</h3>
               <div class="widget-content">
-                <img class="footer-logo img-fluid mb-2" src="{% static 'assets/img/logo/default-logo.png'%}" alt="footer logo">
-                <p>         صحيفة  المشاركات والتعليقات المنشورة بأسماء أصحابها أو بأسماء مستعارة لاتمثل الرأي الرسمي لصحيفة (المواطن) الإلكترونية بل تمثل وجهة نظر كاتبها </p>
+                <img class="footer-logo img-fluid mb-2" src="{%static 'assets/img/logo/default-logo.png' %}" alt="footer logo">
+               <p>         صحيفة  المشاركات والتعليقات المنشورة بأسماء أصحابها أو بأسماء مستعارة لاتمثل الرأي الرسمي لصحيفة (المواطن) الإلكترونية بل تمثل وجهة نظر كاتبها </p>
+
                 <address><i class="fa fa-map-marker-alt"></i>مدينة الذهب <br>
                   المملكة العربية السعودية محافظة الخرمة
                 </address>
@@ -722,7 +941,7 @@
                     <div class="col-9 col-md-8">
                       <div class="card-body pt-0">
                         <h3 class="card-title h6">
-                          <a href="../post/single1.html">{{post.title}}</a>
+                          <a href="">{{post.title}}</a>
                         </h3>
                         <div class="card-text small text-muted">
                           <time datetime="2019-10-16">{{post.created_date}}</time>
@@ -748,7 +967,7 @@
                     <!--thumbnail-->
                     <div class="col-3 col-md-4 pr-2 pr-md-0">
                       <div class="ratio_115-80 image-wrapper">
-                        <a href="../post/single1.html">
+                        <a href="{% url 'index' %}">
                           <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
                         </a>
                       </div>
@@ -757,7 +976,7 @@
                     <div class="col-9 col-md-8">
                       <div class="card-body pt-0">
                         <h3 class="card-title h6">
-                          <a href="../post/single1.html">{{post.title}}</a>
+                          <a href="{% url 'index' %}">{{post.title}}</a>
                         </h3>
                         <div class="card-text small text-muted">
                           <time datetime="2019-10-16">{{post.created_date}}</time>
@@ -782,9 +1001,9 @@
           <nav class="navbar navbar-expand navbar-dark px-0">
             <!--footer left menu-->
             <ul class="navbar-nav footer-nav text-center first-left-lg-0">
-              <li class="nav-item"><a class="nav-link" href="../pages/about-us.html">عن الموقع</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/contact-us.html">تواصل معنا</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/term-of-use.html">الصفحة الرئيسية</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">عن الموقع</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">تواصل معنا</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">الصفحة الرئيسية</a></li>
 
             </ul>
             <!--end footer left menu-->
@@ -799,81 +1018,14 @@
       </div>
       <!--end copyright menu-->
     </footer>
+    {% endblock Footer %}
     <!-- End Footer -->
   </div>
   <!-- ========== END WRAPPER ========== -->
   <!--Back to top-->
-  <a class="material-scrolltop back-top btn btn-light border position-fixed r-1 b-1" href="#"><i class="fa fa-arrow-up"></i></a>
+  <a class="material-scrolltop back-top btn btn-light border position-fixed r-1 b-1" href="{% url 'index' %}"><i class="fa fa-arrow-up"></i></a>
 
   <!--BOOTSTRAP CUSTOMIZER PLUGIN-->
-  <div id="switcher" class="d-none d-md-block">
-    <!--settings-->
-    <div id="theme-settings"><i class="fas fa-cog"></i></div>
-    <!--title-->
-    <h4 class="text-primary">Customizer</h4>
-    <!-- reload -->
-    <a href="javascript:window.location.reload(true)" class="position-absolute t-1 r-1" title="Reset customize"><i class="fa fa-sync-alt"></i></a>
-    <div class="demo-area">
-      <!--Layout style-->
-      <h6>Layout Style</h6>
-      <ul class="theme-starter">
-        <li><a id="ly-fullwidth" class="badge border" href="#">Fullwidth</a></li>
-        <li><a id="ly-boxed" class="badge border" href="#">Boxed</a></li>
-        <li><a id="ly-framed" class="badge border" href="#">Framed</a></li>
-      </ul>
-      <!-- skin -->
-      <h6>Skin style</h6>
-      <ul class="theme-skin">
-        <li><a id="skin-light" class="badge border" href="#">Light</a></li>
-        <li><a id="skin-dark" class="badge border" href="#">Dark</a></li>
-        <li><a id="skin-dark2" class="badge border" href="#">Dark Nav</a></li>
-      </ul>
-      <!--primary color-->
-      <h6>Primary Color</h6>
-      <ul class="theme-colors">
-        <li><a class="blue badge" data-color="blue" title="Blue (default)" href="#"><span class="d-none">Blue</span></a></li>
-        <li><a class="purple badge" data-color="purple" title="Purple" href="#"><span class="d-none">Purple</span></a></li>
-        <li><a class="red badge" data-color="red" title="Red" href="#"><span class="d-none">Red</span></a></li>
-        <li><a class="pink badge" data-color="pink" title="Pink" href="#"><span class="d-none">Pink</span></a></li>
-        <li><a class="orange badge" data-color="orange" title="Orange" href="#"><span class="d-none">Orange</span></a></li>
-        <li><a class="darkblue badge" data-color="darkblue" title="Dark Blue" href="#"><span class="d-none">Dark Blue</span></a></li>
-        <li><a class="lightblue badge" data-color="lightblue" title="Light Blue" href="#"><span class="d-none">Light Blue</span></a></li>
-        <li><a class="green badge" data-color="green" title="Green" href="#"><span class="d-none">Green</span></a></li>
-        <li><a class="yellow badge" data-color="yellow" title="Yellow" href="#"><span class="d-none">Yellow</span></a></li>
-        <li><a class="blacksoft badge" data-color="blacksoft" title="Black Soft" href="#"><span class="d-none">Black Soft</span></a></li>
-      </ul>
-      <!--secondary color-->
-      <h6>Secondary Color</h6>
-      <ul class="second-colors">
-        <li><a class="black badge" data-scolor="black" title="Black (default)" href="#"><span class="d-none">Black (default)</span></a></li>
-        <li><a class="red badge" data-scolor="red" title="Red" href="#"><span class="d-none">Red</span></a></li>
-        <li><a class="blue badge" data-scolor="blue" title="Blue" href="#"><span class="d-none">Blue</span></a></li>
-        <li><a class="pink badge" data-scolor="pink" title="Pink" href="#"><span class="d-none">Pink</span></a></li>
-        <li><a class="orange badge" data-scolor="orange" title="Orange" href="#"><span class="d-none">Orange</span></a></li>
-        <li><a class="darkblue badge" data-scolor="darkblue" title="Dark Blue" href="#"><span class="d-none">Dark Blue</span></a></li>
-        <li><a class="lightblue badge" data-scolor="lightblue" title="Light Blue" href="#"><span class="d-none">Light Blue</span></a></li>
-        <li><a class="purple badge" data-scolor="purple" title="Purple" href="#"><span class="d-none">Purple</span></a></li>
-        <li><a class="green badge" data-scolor="green" title="Green" href="#"><span class="d-none">Green</span></a></li>
-        <li><a class="blacksoft badge" data-scolor="blacksoft" title="Black Soft" href="#"><span class="d-none">Black Soft</span></a></li>
-      </ul>
-      <!--background style-->
-      <h6>Background Boxed</h6>
-      <ul class="bg-img">
-        <li><a class="badge border" data-bg="cover" href="#"><span>Cover 1</span></a></li>
-        <li><a class="badge border" data-bg="cover2" href="#"><span>Cover 2</span></a></li>
-        <li><a class="badge border" data-bg="cover3" href="#"><span>Cover 3</span></a></li>
-        <li><a class="badge border" data-bg="repeat" href="#"><span>Patern 1</span></a></li>
-        <li><a class="badge border" data-bg="repeat2" href="#"><span>Patern 2</span></a></li>
-        <li><a class="badge border" data-bg="repeat3" href="#"><span>Patern 3</span></a></li>
-      </ul>
-    </div>
-  </div>
-  <!--END BOOTSTRAP CUSTOMIZER PLUGIN-->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-
-
-
 
 </body>
 

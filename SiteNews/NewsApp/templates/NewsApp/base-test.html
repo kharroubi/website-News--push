@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+   {% block urgentposts %}
+              <!--Breaking content-->
+              <div class="col-10 col-sm-11 col-md-9 col-lg-10 pl-1 pl-md-2">
+                <div class="breaking-box">
+                  <div id="carouselbreaking" class="carousel slide" data-ride="carousel">
+
+                    <!--breaking news-->
+                    <div class="carousel-inner">
+                      <!--list post-->
+
+                      <div class="carousel-item active aribudin">
+                         <a class="h4 font-weight-light" href="#">عاجل | الدفاع الروسية: اعتراض طائرة استطلاع أميركية فوق البحر الأسود</a>
+                      </div>
+                      <!--list post-->
+                      <div class="carousel-item aribudin">
+                        <a class="h4 font-weight-light" href="#">وسائل إعلام لبنانية: وزير الداخلية يتجه للاستقالة من الحكومة غدا #عاجل</a>
+                      </div>
+                      <!--list post-->
+
+                    </div>
+
+                    <!--end breaking news-->
+                    <!--navigation slider-->
+                    <div class="navigation-box p-2 d-none d-sm-block">
+                      <!--nav left-->
+                      <a class="carousel-control-prev text-primary" href="#carouselbreaking" role="button" data-slide="prev">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <!--nav right-->
+                      <a class="carousel-control-next text-primary" href="#carouselbreaking" role="button" data-slide="next">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div><!--end navigation slider-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endblock urgentposts %}
+
+
+{% block carousel %}
+{% endblock carousel %}
+
+
+
+{% block lastNews %}
+{% endblock lastNews %}
+
+
+{% block leftblock %}
+{% endblock leftblock %}
+
+
+{% block Footer %}
+{% endblock Footer %}

@@ -1,0 +1,29 @@
+// margin module
+.m-module {
+	margin: $margin-module;
+}
+.mt-module {
+	margin-top: $margin-module;
+}
+.mr-module {
+	margin-right: $margin-module;
+}
+.mb-module {
+	margin-bottom: $margin-module;
+}
+.ml-module {
+	margin-left: $margin-module;
+}
+// margin minus
+.mt-minus {
+    margin-top: $margin-minus;
+}
+.mt-minus-sm {
+    margin-top: $margin-minus-sm;
+}
+.mt-minus-md {
+    margin-top: $margin-minus-md;
+}
+.mt-minus-lg {
+    margin-top: $margin-minus-lg;
+}

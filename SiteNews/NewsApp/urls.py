@@ -18,12 +18,15 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import index, base, post_details
+from .views import index, base, post_details ,basetest,about
 
 urlpatterns = [
+
     path('', index, name='index'),
-    path('base', base, name='base'),
+    path('basetest', basetest, name='basetest'),
+    path('about', about, name='about'),
     path('post_details/<int:id>', post_details, name='post_details'),
+    path('template', base, name='base')
 
 
 

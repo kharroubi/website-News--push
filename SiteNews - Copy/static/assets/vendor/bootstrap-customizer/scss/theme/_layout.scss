@@ -1,0 +1,65 @@
+/*------------------------------------
+  Boxed and Framed Layout
+------------------------------------*/
+//@extend-elements
+//.boxed .wrapper, .framed .wrapper
+%extend_layout {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	box-shadow: $boxed-framed-box-shadow;
+}
+.full-width {
+	background-color: $white;
+}
+.boxed {
+	background-color: $boxed-framed-bg;
+	.wrapper {
+		background-color: $boxed-wrapper-bg;
+		@extend %extend_layout;
+	}
+}
+.framed {
+	background-color: $boxed-framed-bg;
+	.wrapper {
+		@extend %extend_layout;
+		background-color: $framed-main-bg;
+	}
+}
+.dark-skin {
+	&.framed {
+		background-color: $framed-main-dark-bg;
+		.wrapper {
+			background-color: $framed-main-dark-bg;
+		}
+	}
+	&.boxed {
+		background-color: $boxed-main-dark-bg;
+		.wrapper {
+			background-color: $boxed-main-dark-bg;
+		}
+	}
+	&.full-width {
+		background-color: $dark;
+	}
+}
+@media (max-width: 767.98px) {
+	.boxed .wrapper, .framed .wrapper {
+		width: $boxed-framed-mobile-width;
+	}
+}
+@media (min-width: 767.98px) {
+	.boxed .wrapper, .framed .wrapper {
+		width: $boxed-framed-tabs-width;
+	}
+}
+@media (min-width: 980px) {
+	.boxed, .framed{
+		.wrapper {
+			width: $boxed-framed-desktop-width;
+		}
+		.navbar {
+			padding: $boxed-framed-desktop-padding;
+		}
+	}
+}

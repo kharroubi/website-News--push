@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block urgentposts %}
+{% endblock urgentposts %}
+
+{% block carousel %}
+{% endblock carousel %}
+
+{% block lastNews %}
+<!-- block content -->
+          <div  align="center" >
+             <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+              <!-- block title -->
+              <br>
+              <div class="block-title-8" align="center">
+                <h1>
+                  <span class=" text-black   ">{{post_details.title}}</span>
+                </h1>
+              </div>
+
+                <img class="img-fluid lazy loaded" src="{{ post_details.img.url }}"
+                alt="Image description" data-was-processed="true">
+            </div>
+          </div>
+          <div  align="center" >
+            <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+
+                <p dir="rtl" style="margin: 0 !important;">
+                <a class="">  {{post_details.text}} </a>
+
+
+
+                </p>
+
+
+                <ul>
+
+                  <li><aclass="page-link" href="">
+
+                    </a>عدد المشاهدات {{post_details.nb_views}}
+                  </li>
+                  <li><a >
+                    الكاتب: {{ post_details.author.name }} </a>
+                  </li>
+                  <li class="page-item" ><a class="page-link" href="{% url 'index' %}">المزيد من أخر الاخبار على الموقع الرسمي</a></li>
+                </ul>
+
+
+              <!-- end block content -->
+
+            <!--end block-->
+
+
+            <!--Pagination-->
+
+            <!--end pagination-->
+
+          <!-- end left column -->
+
+{% endblock lastNews %}
+{% block leftblock %}
+{% endblock leftblock %}
+
+
+
+

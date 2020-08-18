@@ -1,0 +1,154 @@
+/*------------------------------------
+	Default color
+------------------------------------*/
+@each $color, $value in $colors {
+    .color-#{$color}{
+		.h6, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, .h1 > a, .h2 > a, .h3 > a, .h4 > a, .h5 > a, .h6 > a, p > a {
+			color: $font-heading;
+		}
+		.page-link:hover, .btn-success, .btn-primary, .btn-secondary, .btn-info, .btn-danger, .btn-warning, .btn-dark, .btn-success:hover, .btn-primary:hover, .btn-secondary:hover, .btn-info:hover, .btn-danger:hover, .btn-warning:hover, .btn-dark:hover {
+			color: $white;
+		}
+		.btn-outline-light {
+			color: $white;
+		}
+		.dropdown-item {
+			color: $color-menu;
+		}
+		.bg-light {
+			background-color: $light !important;
+		}
+		.badge-light {
+			color: $color-menu;
+		}
+		.btn-light {
+			color: $color-menu;
+		}
+		.btn-outline-primary:hover {
+			color: $white;
+		}
+		a.h5{
+			color: $color-menu;
+		}
+		.navbar-dark .navbar-nav .nav-link:hover, .color-red .navbar-dark .navbar-nav .nav-link:focus {
+			color: $white;
+		}
+		.footer-dark {
+			h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
+				&> a {
+	                color: $footer-color;
+				}
+			}
+		    .hover-a{
+				&:hover{
+					h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
+						&> a {
+		                    color: $value;
+						}
+					}
+				}
+			}
+			.fab {
+			    color: $footer-color;
+			}
+		}
+		.nav-tabs .nav-link {
+		    color: $color-menu;
+		}
+		.main-menu.navbar-dark .hover-a:hover h1 > a, .main-menu.navbar-dark .hover-a:hover h2 > a, .main-menu.navbar-dark .hover-a:hover h3 > a, .main-menu.navbar-dark .hover-a:hover h4 > a, .main-menu.navbar-dark .hover-a:hover h5 > a, .main-menu.navbar-dark .hover-a:hover h6 > a, .main-menu.navbar-dark .hover-a:hover .h1 > a, .main-menu.navbar-dark .hover-a:hover .h2 > a, .main-menu.navbar-dark .hover-a:hover .h3 > a, .main-menu.navbar-dark .hover-a:hover .h4 > a, .main-menu.navbar-dark .hover-a:hover .h5 > a, .main-menu.navbar-dark .hover-a:hover .h6 > a {
+		    color: $value !important;
+		}
+		.owl-carousel button.owl-dot.active {
+		    background: $value;
+		}
+	}
+}
+/*------------------------------------
+	Dark Skin color
+------------------------------------*/
+.dark-skin {
+	#switcher {
+		#theme-settings, #theme-setting {
+		    background: $dark;
+		}
+	}
+}
+@each $color, $value in $colors {
+	.dark-skin.color-#{$color} {
+		h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		    color: $light;
+			&> a{
+			    color: $light;
+				&:hover {
+					color: $value !important;
+				}
+				&.text-white {
+					color: $white !important;
+				}
+			}
+		}
+		.hover-a{
+			&:hover{
+				h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p {
+					&> a {
+						color: $value !important;
+						&.text-white {
+							color: $white !important;
+						}
+					}
+				}
+			}
+		}
+		#theme-settings .fa-cog {
+		    color: $value;
+		}
+		.main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover, .main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus, .main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item.active {
+		    color: $value !important;
+		}
+		.main-menu.navbar-light .hover-mode .main-nav li:hover > a{
+			color: $value;
+		}
+		.nav-block-link li a.nav-link, .nav-block-link1 li a.nav-link, .nav-block-link2 li a.nav-link, .nav-block-link3 li a.nav-link, .nav-block-link4 li a.nav-link, .nav-block-link5 li a.nav-link, .nav-block-link6 li a.nav-link, .nav-block-link7 li a.nav-link, .nav-block-more li a.nav-link {
+		    color: $light;
+		}
+		.side-link li a.caret-collapse.collapsed, .sidebar-link li a.caret-collapse.collapsed {
+		    color: $light;
+		}
+		.side-link li a.caret-collapse.collapsed, .sidebar-link li a.caret-collapse.collapsed {
+			&:hover{
+				color: $value;
+			}
+		}
+	}
+}
+@media (min-width: 992px){
+    @each $color, $value in $colors {
+		.color-#{$color} {
+			.hover-mode{
+				.main-nav{
+					li{
+						&:hover {
+							&> a {
+								color: $value;
+							}
+						}
+					}
+				}
+
+			}
+			.main-menu.navbar-dark .hover-mode .main-nav > li > a.active, .main-menu.navbar-dark .hover-mode .main-nav > li:hover > a {
+			    color: $white !important;
+			    background-color: $value !important;
+			}
+			.main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover, .main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus, .main-menu.navbar-dark .navbar-nav .nav-item .dropdown-menu .dropdown-item.active {
+			    color: $value !important;
+		    }
+		    .main-menu.navbar-dark .hover-mode .main-nav li:hover > a {
+			    color: $value !important;
+		    }
+		    .main-menu.navbar-dark .hover-mode .main-nav>li:hover > a {
+			    color: $white !important;
+		    }
+		}
+	}
+}
