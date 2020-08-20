@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block urgentposts %}
+{% endblock urgentposts %}
+
+{% block carousel %}
+{% endblock carousel %}
+
+{% block lastNews %}
+<!-- block content -->
+          <div  align="center" >
+             <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+              <!-- block title -->
+              <br>
+              <div class="block-title-8" align="center">
+                <h1>
+                  <span class=" text-black   ">{{post_details.title}}</span>
+                </h1>
+              </div>
+
+                <img class="img-fluid lazy loaded" src="{{ post_details.img.url }}"
+                alt="Image description" data-was-processed="true">
+            </div>
+          </div>
+          <div  align="center" >
+            <div class="col-md-8">
+            <!-- block start -->
+            <div class="block-area">
+
+                <p align="right" style = "font-size:22px" >
+                <a class="">  &nbsp;&nbsp; &nbsp;&nbsp; {{post_details.text}} </a>
+                </p>
+               <a class="page-link" href="{% url 'index' %}">المزيد من أخر الاخبار على الموقع الرسمي</a>
+               <br>
+
+  <div class="col-md-14">
+            <!-- block start -->
+            <div class="block-area">
+              <!-- block title -->
+              <div class="block-title-6">
+                <h4 class="h5 border-primary">
+                  <span class="bg-blue text-white">أخر الأخبار</span>
+                </h4>
+              </div>
+              <!-- block content -->
+
+
+
+              <div class="border-bottom-last-0 first-pt-0">
+                <!--post start-->
+                {% for post in posts %}
+                <article class="card card-full hover-a py-4">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                      <!--thumbnail-->
+                      <div class="ratio_360-202 image-wrapper">
+                        <a href="{{ post.get_absolute_url }}">
+                          <img class="img-fluid lazy" src="{%static 'assets/img/assets/lazy-empty.png'%}" data-src="{{post.img.url}}" alt="Image description">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-12 col-lg-6">
+                  <div class="card-body pt-3 pt-sm-0 pt-md-3 pt-lg-0">
+
+                        <!--title-->
+                        <h4 class="card-title h4 h4-sm h4-sm">
+                          <a href="{{ post.get_absolute_url }}"> {{post.title}}</a>
+                        </h4>
+                        <!--author and date-->
+                        <div class="card-text mb-2 text-muted small">
+                          <span class="d-none d-sm-inline mr-1">
+                            <a class="font-weight-bold" href=""> بواسطة: {{post.author.get_full_name}} </a>
+
+                            <i class="fa fa-eye" aria-hidden="true">  المشاهدات: {{post.nb_views}}</i>
+
+                          </span>
+                         </div>
+                        <!--description-->
+                        <h3 class="card-text">{{post.text|truncatewords:25}} </h3>
+                        <!-- read more button -->
+                        <a class="btn btn-outline-primary" href="{{ post.get_absolute_url }}">المزيد</a>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                 {% endfor %}
+              </div>
+
+              <!-- end block content -->
+            </div>
+            <!--end block-->
+
+            <!--Pagination-->
+            <div class="clearfix my-4">
+              <nav class="float-left" aria-label="Page navigation example">
+                <!--page number-->
+                <ul class="pagination">
+
+                  <li class="page-item" ><a class="page-link" href="{% url 'index' %}">الرئيسية</a></li>
+                </ul>
+                <!--end page number-->
+              </nav>
+
+            </div>
+            <!--end pagination-->
+          </div>
+              <!-- end block content -->
+
+            <!--end block-->
+
+
+            <!--Pagination-->
+
+            <!--end pagination-->
+
+          <!-- end left column -->
+            </div></div></div></div>
+
+
+          <!-- end left column -->
+
+          <!-- start right column -->
+{% endblock lastNews %}
+{% block leftblock %}
+{% endblock leftblock %}
+
+
+
+
