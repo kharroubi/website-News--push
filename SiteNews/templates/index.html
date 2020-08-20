@@ -189,28 +189,28 @@
             <!--left main menu start-->
             <ul id="left-main" class="navbar-nav main-nav navbar-uppercase first-left-lg-0">
               <li class="nav-item">
-                <a id="navbarhome" class="nav-link active" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الصفحة الرئيسية</a>
+                <a id="navbarhome" class="nav-link active" href="{% url 'index' %}">الصفحة الرئيسية</a>
                 <!--link-->
                <!-- end link -->
               </li>
-              <li class="nav-item"><a class="nav-link" href="{%url 'index' %}">أعمال</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'bisness' %}">أعمال</a></li>
               <!--mega menu-->
               <li class="nav-item mega-dropdown">
-                <a id="navbarmega2" class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">سفر</a>
+                <a id="navbarmega2" class="nav-link" href="{% url 'travel' %}">سفر</a>
 
               </li>
               <!--end mega menu-->
               <!--mega menu-->
 
               <li class="nav-item mega-dropdown">
-                <a id="navbarmega4" class="nav-link " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">سياسة</a>
+                <a id="navbarmega4" class="nav-link " href="{% url 'politic' %}">سياسة</a>
                 <!--content mega-->
 
               </li>
               <!--end mega menu-->
               <!--dropdown menu-->
               <li class="nav-item dropdown">
-                <a id="navbarDropdown1" class="nav-link " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">منوعات</a>
+                <a id="navbarDropdown1" class="nav-link " href="{% url 'divers' %}">منوعات</a>
                 <!--link-->
               </li>
 
@@ -225,7 +225,7 @@
                       <div class="card card-full hover-a mb-4">
                         <!--thumbnail, category & icon-->
                         <div class="ratio_251-141 image-wrapper">
-                          <a href="{% static 'post/single6.html'%}">
+                          <a href="{% url 'video' %}">
                             <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{% static 'assets/img/251x141/img1.jpg'%}" alt="Image description">
                             <div class="post-type-icon">
                               <span class="fa-stack-sea">
@@ -239,7 +239,7 @@
                         <!-- title, date & comments -->
                         <div class="card-body">
                           <h3 class="card-title h6">
-                            <a href="{% static 'post/single6.html'%}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
+                            <a href="{% url 'video' %}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
                           </h3>
                           <div class="card-text text-muted small">
                             <time datetime="2020-10-22">Oct 22, 2019</time>
@@ -255,7 +255,7 @@
                       <div class="card card-full hover-a mb-4">
                         <!--thumbnail, category & icon-->
                         <div class="ratio_251-141 image-wrapper">
-                          <a href="{% static 'post/single6.html'%}">
+                          <a href="{% url 'video' %}">
                             <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{% static 'assets/img/251x141/img1.jpg'%}" alt="Image description">
                             <div class="post-type-icon">
                               <span class="fa-stack-sea">
@@ -269,7 +269,7 @@
                         <!-- title, date & comments -->
                         <div class="card-body">
                           <h3 class="card-title h6">
-                            <a href="{% static 'post/single6.html'%}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
+                            <a href="{% url 'video' %}">جولة في محافظة الخرمة | مدينة الذهب | بوابة نجد والحجاز</a>
                           </h3>
                           <div class="card-text text-muted small">
                             <time datetime="2020-10-22">Oct 22, 2019</time>
@@ -285,8 +285,8 @@
                       <div class="card card-full hover-a mb-4">
                         <!--thumbnail, category & icon-->
                         <div class="ratio_360-202 image-wrapper">
-                          <a href="../post/single6.html">
-                            <img class="img-fluid lazy" src="../../assets/img/assets/lazy-empty.png" data-src="{% static 'assets/img/251x141/img3.jpg'%}" alt="Image description">
+                          <a href="{% url 'video' %}">
+                            <img class="img-fluid lazy" src="{% static 'assets/img/assets/lazy-empty.png'%}" data-src="{% static 'assets/img/251x141/img3.jpg'%}" alt="Image description">
                             <div class="post-type-icon">
                               <span class="fa-stack-sea">
                                 <i class="fas fa-circle fa-stack-2x fa-inverse"></i>
@@ -346,39 +346,7 @@
               </li>
               <!--end mega menu-->
               <!--dropdown submenu-->
-              <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">نمط حياة</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <!--sub menu-->
-                  <li class="dropdown">
-                    <a id="sub1" class="dropdown-item " href="#" data-toggle="" aria-haspopup="true" aria-expanded="false">مغامرة</a>
-                    <!--link-->
-                    </li>
-                  <!--end submenu-->
-                  <!--submenu-->
-                  <li class="dropdown">
-                    <a id="sub2" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">موضة</a>
-                    <!--link-->
 
-                  </li>
-                  <!--end submenu-->
-                  <!--submenu-->
-                  <li class="dropdown">
-                    <a id="sub3" class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">طعام</a>
-                    <!--link-->
-
-                  </li>
-
-                  <li class="dropdown">
-                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">علوم</a>
-                  </li>
-                  <li class="dropdown">
-                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تقنية</a>
-                  </li>
-                  <li class="dropdown">
-                    <a id="sub4" class="dropdown-item " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">فلك</a>
-                  </li>
-                </ul>
               </li>
               <!--end dropdown submenu-->
               <!--mega menu-->
@@ -415,14 +383,12 @@
     </div>
     <!-- End main menu -->
 
+
+
     <!-- sidebar mobile menu -->
     <div class="mobile-side">
       <!--Left Mobile menu-->
-      <a href="#" class="back-menu">
-        <span class="hamburger-icon open">
-          <span></span><span></span><span></span><span></span>
-        </span>
-      </a>
+      <a href="#" class="back-menu"> </a>
       <nav id="mobile-menu" class="menu-mobile d-flex flex-column push push-left shadow-r-sm bg-white">
         <!-- mobile menu content -->
         <div class="mobile-content mb-auto">
@@ -436,55 +402,16 @@
           <div class="sidenav-menu">
             <nav class="navbar navbar-inverse">
               <ul id="side-menu" class="nav navbar-nav list-group list-unstyled side-link">
-                <li class="menu-item nav-item"><a href="#" class="nav-link active">الصفحة الرئيسية</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'index' %}" class="nav-link active">الصفحة الرئيسية</a></li>
                 <!-- dropdown menu start -->
                 <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                  <a href="#basetest" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-11">اعمال</a>
-                  <!-- dropdown content -->
-                  <ul class="dropdown-menu" aria-labelledby="menu-11" role="menu">
-                    <li class="menu-item nav-item">
-                      <a href="#basetest" class="dropdown-item">تجارة</a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end dropdown menu -->
-                <li class="menu-item nav-item"><a href="{% url 'index' %}" class="nav-link">اقتصاد</a></li>
-                <!-- dropdown menu start -->
-                <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-12">نمط حيات</a>
-                  <!-- dropdown content -->
-                  <ul class="dropdown-menu" aria-labelledby="menu-12" role="menu">
-                    <li class="menu-item nav-item"><a href="{%url 'index' %}" class="dropdown-item">موضة</a></li>
-                    <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                      <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" id="menu-13">سفر</a>
-                      <!-- dropdown submenu -->
-                      <ul class="dropdown-menu" aria-labelledby="menu-13" role="menu">
-                        <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">مغامرات</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                      <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle" id="menu-14">علوم</a>
-                      <ul class="dropdown-menu" aria-labelledby="menu-14" role="menu">
-                        <li class="menu-item nav-item"><a href="../category/category.html" class="dropdown-item">صحة</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <!-- end dropdown menu -->
-                <!-- dropdown menu start -->
-                <li class="menu-item menu-item-has-children dropdown mega-dropdown nav-item">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-15">رياضة</a>
-                  <!-- dropdown content -->
-                  <ul class="dropdown-menu" aria-labelledby="menu-15" role="menu">
-                    <li class="menu-item nav-item"><a href="{%url 'index' %}" class="dropdown-item">سيارات</a></li>
-                    <li class="menu-item nav-item"><a href="{%url 'index' %}" class="dropdown-item">كرة قدم</a></li>
-                    <li class="menu-item nav-item"><a href="{%url 'index' %}" class="dropdown-item">العاب قوى</a></li>
-                    <li class="menu-item nav-item"><a href="{%url 'index' %}" class="dropdown-item">تنس</a></li>
-                  </ul>
-                </li>
-                <!-- end dropdown menu -->
-                <li class="menu-item nav-item"><a href="{%url 'index' %}" class="nav-link">عالمي</a></li>
-              </ul>
+                <a href="{% url 'bisness' %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >أعمال</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'travel' %}" class="nav-link">سفر</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'index' %}" class="nav-link">سياسة</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'divers' %}" class="nav-link">منوعات</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'video' %}" class="nav-link">فيديو</a></li>
+                <li class="menu-item nav-item"><a href="{% url 'index' %}" class="nav-link">العالم</a></li>
+               </ul>
             </nav>
           </div>
         </div>

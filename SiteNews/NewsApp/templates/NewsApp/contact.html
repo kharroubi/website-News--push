@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-
+{% csrf_token %}
 
 
 
@@ -9,45 +9,90 @@
 
 {% endblock urgentposts %}
 
-<br>
+
 
 
 {% block carousel %}
-<h1> عن الصحيفة: </h1>
-  <div  align="center" >
+
+ <div  align="center" >
       <div class="col-md-9">
-<p style = "font-size:20px">
 
-   المقابلات الإلكترونية – إيجابيات وسلبيات ونصائح
-قد ظهرت أشكال جديدة للصحافة فبعد أن كانت حكراً على صحفيي الورق ومراسلي التلفاز والمذياع تشعبت مع التغيرات الإلكترونية والسياسية. فقد ظهرت مؤخراً مسميات جديدة – ربما لم تشع حتى الآن في السعودية – كالصحفي الرقمي والصحافة المدنية.
-من أشكال العمل الصحفي الرقمي والورقي أيضاً استخدام الأدوات الرقمية في إجراء المقابلات والحصول على المعلومات. وفي هذا الموضوع نستعرض بعض الإيجابيات والسلبيات والأفكار المفيدة التي قدمها الكاتب جونثان ديوب في إحدى مقالاته التي عنونها بـ ( نصيحة من أجل المقابلات عبر الإيميل ). يقول الكاتب بأن هذه لمحة لكيفية استخدام الإيميل أو المراسلة السريعة كالمسنجر للمراسلة مع تحاشي الوقوع في التصحيحات المهينة.
-يقول ديوب بأن المسنجر والإيميل يستخدمان كإحدى الوسائل الإيجابية نظر لتوفيرهما هذه العناصر :
+<section id="contact">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h3 class="section-title">تواصل معنا</h3>
+          <p class="section-description">في حال رغبتكم في الاستفسار عن أحد البرامج أو الخدمات الاستشارية المقدمة، يرجى تكرما تعبئة نموذج التواصل – كما يمكن التواصل معنا عبر أي من قنوات التواصل المتاحة .</p>
+        </div>
+      </div>
 
-– يوفران الوقت , فلا حاجة بإستخدامهما للبطاقات الهاتفية والإنتظار الطويل ليرد الضيف المكالمة .
-– المقبلات الرقمية عملية إذ يمكن للمحرر تجهيز مقدمة كاملة وقائمة بالأسئلة وعند تعاون المصدر يتم قص ولصق إجاباته في التقارير أو بعثها بشكل تام.
-– توفر سجلاً مكتوباً في حال تفنيد المصدر لأي تصريح قاله
-– تعطي المصدر فرصة للتفكير وصياغة الرد
-– ربما تكون وسائل أفضل لمقابلة الأفراد في مختلف المناطق ذات الأوقات المختلفة أو مع الأفراد الذين لا يتحدثون اللغة بشكل جيد ولكن بإستطاعتهم الكتابة بشكل جيد.
-ولكن هناك عدد من السلبيات وهي :
-– لا يمكن للمحرر معرفة من الذي قام بالرد. فقد يكون بريد المدراء تحت إشراف مستشاري العلاقات العامة أو أي شخص آخر.
-– لا يتيح الإيميل الفرصة للمحرر لتوجيه أسئلة عفوية أو التعقيب على إجابة المصدر
-– لابد أن تكون دقيقاً جداً في أسئلتك لأنك غير قادر على طلب تعقيبات وتوضيحات من المصدر مباشرة
-– يمكن للمصدر نشر نسخ كاملة عن اللقاء عبر الإنترنت بسهولة كما تفعل وقد فعلها البعض عندما لا يشعرون بالرضى عن القصة الصحفية بشكلها المنشور
-– لا تعتبر وسائل جدية لتدوين ردود الفعل العفوية. إذ لا يمكنك مشاهدة ردة فعل الشخص الجسدية تجاه السؤال. لا يمكنك سماعه أو سماع تردده ومعاناته لإيجاد الكلمة المناسبة ولا يمكنك النفاذ إلى طرقة تفكيره لأنك لا تحصل إلا على الرد النهائي.
-– ربما توفر لك المقابلة الرقمية تصريحات مفيدة ولكن قد لا تعطيك مقابلة كاشفة.
+      <!-- Uncomment below if you wan to use dynamic maps
+      <iframe src="http://www.google.com/maps/place/%D8%A7%D9%84%D9%83%D9%84%D9%8A%D8%A9+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%D8%A9+%D8%A8%D8%A7%D9%84%D8%AE%D8%B1%D9%85%D8%A9%E2%80%AD/@21.8960392,42.0017607,727m/data=!3m2!1e3!4b1!4m5!3m4!1s0x15ed241b7fe7422b:0xc9693840d6eae45c!8m2!3d21.8960342!4d42.0039494" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+-->
+      <div class="container wow fadeInUp mt-5">
+        <div class="row justify-content-center">
 
-نصائح :
+          <div class="col-lg-3 col-md-4">
 
-– يمكن للإيميل البقاء للأبد. فبمجرد إرساله يمكن توزيعه على الغرباء . ولذلك لابد لك من إبقاءه محترفاً في جميع الأوقات.
-– قدم نفسك كصحفي .
-– طبق عليه نفس مهاراتك في الفكر النقدي والتحقق من الوقائع التي تستخدمها مع أي مصدر للمعلومة.
-– نوّع مصادرك واحصل على هوياتهم المتعددة على الشبكة وتذكر بأن البريد الإلكتروني لأي شخص ربما يكون مزيفاً.
-تأكيداً للنقطة الأخيرة , قام ديوب بعرض موقف محرج تعرض له أحد الصحفيين – ويدعى دان فيرتون – حين نشر مقابلة مع شخص يدعى ” أبو مجاهد ” الذي عرف نفسه كأحد عناصر تنظيم إسلامي باكستاني متطرف يدعى “حركة المجاهدين” والذي كان خلف هجوم بدودة رقمية ساهمت في تعطيل الإنترنت وقد نشرت تلك المقابلة في مجلة كمبيوتر ورلد (عالم الكمبيوتر). لقد فـُندت هذه القصة بعدما عُـلم أن أحد الصحفيين خدع الآخر وما كان أبو مجاهد هذا إلا رجل يدعى بريان ماكوليامز – 43 عاماً – أحد الصحفيين الذي اعترف بخداعه لفيرتون بهدف تعلم المراسلين الشك في الأشخاص الذين يدعون تورطهم في الإرهاب الرقمي. يقول فيرتون : ” لقد شعرت بوقوعي في الفخ, وهو شيء لا يمكن ابتلاعه بسهولة. والآن أنا هنا أحك القمل كثمن يدفع لنومي مع الكلاب ” < كناية عن طرده من العمل في المجلة.
+            <div class="info">
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p> المملكة العربية السعودية<br>الكلية الجامعية بالخرمة</p>
+              </div>
 
-</p>
- </div>
-  </div>
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p>a.alsubai@tu.edu.sa</p>
+              </div>
 
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>00966503220845</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="الاسم" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="البريد الالكتروني" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="الموضوع" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="الرسالة"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">ارسال</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div></div>
+    </section><!-- #contact -->
 
 {% endblock carousel %}
 

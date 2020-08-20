@@ -18,7 +18,8 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import index, base, post_details ,basetest,about
+from .views import index, base, post_details ,basetest,about ,contact,travel,health,video,divers,bisness,politic
+admin.site.site_header ='    صـــحيفـــةالكليــــة الجامعيـــة  بالـخـرمــة'
 
 urlpatterns = [
 
@@ -26,9 +27,14 @@ urlpatterns = [
     path('basetest', basetest, name='basetest'),
     path('about', about, name='about'),
     path('post_details/<int:id>', post_details, name='post_details'),
-    path('template', base, name='base')
-
-
+    path('template', base, name='base'),
+    path('contact', contact, name='contact'),
+    path('travel', travel, name='travel'),
+    path('health', health, name='health'),
+    path('video', video, name='video'),
+    path('divers', divers, name='divers'),
+    path('bisness', bisness, name='bisness'),
+    path('politic', politic, name='politic'),
 
 ]
 
